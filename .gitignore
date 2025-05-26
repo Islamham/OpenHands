@@ -235,6 +235,5 @@ containers/runtime/code
 **/node_modules/
 evaluation/benchmarks/readme_bench/scripts/boto.py
 evaluation/benchmarks/readme_bench/scripts/boto2.py
-/evaluation/benchmarks/readme_bench/scripts/evaluation
 evaluation/benchmarks/readme_bench/scripts/liteLLM2.py
 evaluation/benchmarks/readme_bench/scripts/liteLLM.py

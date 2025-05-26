@@ -51,15 +51,26 @@ def get_instruction(instance: pd.Series, metadata: EvalMetadata):
     # https://github.com/eschluntz/swe-bench-experiments/tree/main/evaluation/verified/20241022_tools_claude-3-5-sonnet-updated/trajs
     instruction = (
         # f'''Build a simple app'''
+        # f'''
+        # Using the README.md in the repo:
+        # 1. Set up the environment
+        # 2. Set up dependencies
+        # 3. Build the project
+        # Project Name: {repo_name}
+        # Target OS: Linux4
+        # Note: Do not run the project
+        # '''
         f'''
-        Using the README.md in the repo:
-        1. Set up the environment
-        2. Set up dependencies
-        3. Build the project
+        Build the project using the README.md in the repo. 
         Project Name: {repo_name}
         Target OS: Linux4
         Note: Do not run the project
+        Build success criteria:
+        1. if pip is used, confirm project is built successfully using pip show <package_name>
+        2. if maven is used, check output for "[INFO] BUILD SUCCESS"
+        Confirm the project is built successfully using one of the above criteria.
         '''
+        # If you are unable to build the project, please provide a detailed explanation of the issues you encountered.
     )
 
     if RUN_WITH_BROWSING:
