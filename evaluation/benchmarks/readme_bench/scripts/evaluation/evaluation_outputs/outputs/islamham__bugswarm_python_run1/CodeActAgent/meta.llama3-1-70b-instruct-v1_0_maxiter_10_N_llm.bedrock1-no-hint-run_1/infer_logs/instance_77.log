@@ -1,0 +1,332 @@
+2025-06-01 21:18:01,101 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 21:18:01,168 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 21:18:01,463 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Container started: openhands-runtime-5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47. VSCode URL: None
+2025-06-01 21:18:01,463 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Waiting for client to become ready at http://localhost:32820...
+2025-06-01 21:18:21,587 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Runtime is ready.
+2025-06-01 21:18:22,867 - INFO - ------------------------------
+2025-06-01 21:18:22,868 - INFO - BEGIN Runtime Initialization Fn
+2025-06-01 21:18:22,868 - INFO - ------------------------------
+2025-06-01 21:18:22,868 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/boto/botocore.git
+2025-06-01 21:18:39,111 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "f551727759e4",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'botocore'...
+remote: Enumerating objects: 122793, done.
+remote: Counting objects: 100% (448/448), done.
+remote: Compressing objects: 100% (163/163), done.
+remote: Total 122793 (delta 333), reused 336 (delta 267), pack-reused 122345 (from 2)
+Receiving objects: 100% (122793/122793), 347.69 MiB | 30.10 MiB/s, done.
+Resolving deltas: 100% (77295/77295), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 21:18:39,111 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd botocore
+2025-06-01 21:18:39,738 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "f551727759e4",
+  "working_dir": "/workspace/botocore",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/botocore]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 21:18:39,738 - INFO - ------------------------------
+2025-06-01 21:18:39,739 - INFO - END Runtime Initialization Fn
+2025-06-01 21:18:39,739 - INFO - ------------------------------
+2025-06-01 21:18:39,747 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-01 21:18:39,749 - INFO - Loading user workspace microagents: []
+2025-06-01 21:18:39,749 - WARNING - No search engine API key found, skipping search engine
+2025-06-01 21:18:39,749 - INFO - Added microagent stdio server: fetch
+2025-06-01 21:18:41,361 - INFO - [runtime 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Updated MCP config: []
+2025-06-01 21:18:41,361 - INFO - Initializing MCP agent for url='http://localhost:32820/sse' api_key='******' with SSE connection...
+2025-06-01 21:18:41,377 - INFO - Connected to server with tools: ['fetch']
+2025-06-01 21:18:41,377 - INFO - Connected to MCP server url='http://localhost:32820/sse' api_key='******' via SSE
+2025-06-01 21:18:41,377 - INFO - Disconnected from MCP server
+2025-06-01 21:18:41,378 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-01 21:18:41,378 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-01 21:18:41,378 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-01 21:18:41,378 - INFO - [Agent Controller 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] AgentController 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47 - created new state. start_id: 0
+2025-06-01 21:18:41,380 - INFO - [Agent Controller 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-01 21:20:35,165 - INFO - [Agent Controller 5ae67b10-ac5b-46f5-9d67-0567e9ac3992-8da229ae690f1d47] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-01 21:20:35,583 - INFO - ------------------------------
+2025-06-01 21:20:35,583 - INFO - BEGIN Runtime Completion Fn
+2025-06-01 21:20:35,584 - INFO - ------------------------------
+2025-06-01 21:20:35,584 - INFO - ------------------------------
+2025-06-01 21:20:35,584 - INFO - END Runtime Completion Fn
+2025-06-01 21:20:35,584 - INFO - ------------------------------
+2025-06-01 21:20:35,584 - INFO - Got evaluation result for repo 77:
+--------
+{}
+--------
+2025-06-01 21:21:47,986 - ERROR - ----------
+Error in instance [77]: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60). Stacktrace:
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 271, in process_instance
+    runtime.close()
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 461, in close
+    stop_all_containers(close_prefix)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/containers.py", line 7, in stop_all_containers
+    containers = docker_client.containers.list(all=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/models/containers.py", line 1009, in list
+    resp = self.client.api.containers(all=all, before=before,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/container.py", line 212, in containers
+    res = self._result(self._get(u, params=params), True)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 246, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+
+----------[The above error occurred. Retrying... (attempt 1 of 1)]----------
+
+2025-06-01 21:21:52,992 - INFO - Logging LLM completions for instance 77 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-run_1/llm_completions/77
+2025-06-01 21:22:12,890 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 21:23:12,900 - ERROR - UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.48/containers/openhands-runtime-39224663-8e3b-4d6c-90f2-8371b480a810-73429da6ea2cd950/json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 146, in connect
+    await call_sync_from_async(self._attach_to_container)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 18, in call_sync_from_async
+    result = await coro
+             ^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+                                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 394, in _attach_to_container
+    self.container = self.docker_client.containers.get(self.container_name)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/models/containers.py", line 954, in get
+    resp = self.client.api.inspect_container(container_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/container.py", line 793, in inspect_container
+    return self._result(
+           ^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.NotFound: 404 Client Error for http+docker://localhost/v1.48/containers/openhands-runtime-39224663-8e3b-4d6c-90f2-8371b480a810-73429da6ea2cd950/json: Not Found ("No such container: openhands-runtime-39224663-8e3b-4d6c-90f2-8371b480a810-73429da6ea2cd950")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/util/util.py", line 39, in reraise
+    raise value
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 238, in process_instance
+    call_async_from_sync(runtime.connect)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 54, in call_async_from_sync
+    result = future.result()
+             ^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 44, in run
+    return asyncio.run(arun())
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 37, in arun
+    result = await coro
+             ^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 154, in connect
+    self.maybe_build_runtime_container_image()
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 196, in maybe_build_runtime_container_image
+    self.runtime_container_image = build_runtime_image(
+                                   ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/runtime_build.py", line 136, in build_runtime_image
+    result = build_runtime_image_in_folder(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/runtime_build.py", line 209, in build_runtime_image_in_folder
+    if runtime_builder.image_exists(hash_image_name, False):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/builder/docker.py", line 263, in image_exists
+    self.docker_client.images.get(image_name)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/models/images.py", line 333, in get
+    return self.prepare_model(self.client.api.inspect_image(name))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/image.py", line 252, in inspect_image
+    self._get(self._url("/images/{0}/json", image)), True
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 246, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: UnixHTTPConnectionPool(host='localhost', port=None): Read timed out. (read timeout=60)
+2025-06-01 21:23:12,904 - INFO - Logging LLM completions for instance 81 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-run_1/llm_completions/81

@@ -1,0 +1,83 @@
+2025-06-01 20:58:40,951 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 20:58:41,027 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 20:58:41,295 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Container started: openhands-runtime-de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5. VSCode URL: None
+2025-06-01 20:58:41,296 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Waiting for client to become ready at http://localhost:30975...
+2025-06-01 20:58:59,465 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Runtime is ready.
+2025-06-01 20:59:00,771 - INFO - ------------------------------
+2025-06-01 20:59:00,772 - INFO - BEGIN Runtime Initialization Fn
+2025-06-01 20:59:00,772 - INFO - ------------------------------
+2025-06-01 20:59:00,772 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/jazzband/django-push-notifications.git
+2025-06-01 20:59:01,901 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c7e584f32cd8",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'django-push-notifications'...
+remote: Enumerating objects: 2535, done.
+remote: Counting objects: 100% (392/392), done.
+remote: Compressing objects: 100% (145/145), done.
+remote: Total 2535 (delta 299), reused 254 (delta 247), pack-reused 2143 (from 5)
+Receiving objects: 100% (2535/2535), 680.63 KiB | 3.12 MiB/s, done.
+Resolving deltas: 100% (1551/1551), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 20:59:01,902 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd django-push-notifications
+2025-06-01 20:59:02,534 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c7e584f32cd8",
+  "working_dir": "/workspace/django-push-notifications",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/django-push-notifications]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 20:59:02,535 - INFO - ------------------------------
+2025-06-01 20:59:02,535 - INFO - END Runtime Initialization Fn
+2025-06-01 20:59:02,535 - INFO - ------------------------------
+2025-06-01 20:59:02,551 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-01 20:59:02,556 - INFO - Loading user workspace microagents: []
+2025-06-01 20:59:02,556 - WARNING - No search engine API key found, skipping search engine
+2025-06-01 20:59:02,556 - INFO - Added microagent stdio server: fetch
+2025-06-01 20:59:04,214 - INFO - [runtime de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Updated MCP config: []
+2025-06-01 20:59:04,214 - INFO - Initializing MCP agent for url='http://localhost:30975/sse' api_key='******' with SSE connection...
+2025-06-01 20:59:04,229 - INFO - Connected to server with tools: ['fetch']
+2025-06-01 20:59:04,229 - INFO - Connected to MCP server url='http://localhost:30975/sse' api_key='******' via SSE
+2025-06-01 20:59:04,230 - INFO - Disconnected from MCP server
+2025-06-01 20:59:04,230 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-01 20:59:04,230 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-01 20:59:04,230 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-01 20:59:04,230 - INFO - [Agent Controller de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] AgentController de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5 - created new state. start_id: 0
+2025-06-01 20:59:04,232 - INFO - [Agent Controller de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-01 21:02:25,606 - INFO - [Agent Controller de77b1d3-4b99-4b0c-a4fa-3396a62c1b33-d93b52ec160375d5] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-01 21:02:26,600 - INFO - ------------------------------
+2025-06-01 21:02:26,600 - INFO - BEGIN Runtime Completion Fn
+2025-06-01 21:02:26,600 - INFO - ------------------------------
+2025-06-01 21:02:26,600 - INFO - ------------------------------
+2025-06-01 21:02:26,600 - INFO - END Runtime Completion Fn
+2025-06-01 21:02:26,600 - INFO - ------------------------------
+2025-06-01 21:02:26,600 - INFO - Got evaluation result for repo 48:
+--------
+{}
+--------
+2025-06-01 21:02:28,075 - INFO - Logging LLM completions for instance 52 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-run_1/llm_completions/52

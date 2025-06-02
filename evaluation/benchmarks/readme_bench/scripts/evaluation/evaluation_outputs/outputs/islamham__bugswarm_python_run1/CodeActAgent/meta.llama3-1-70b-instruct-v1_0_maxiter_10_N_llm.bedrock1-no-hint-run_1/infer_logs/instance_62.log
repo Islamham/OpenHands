@@ -1,0 +1,83 @@
+2025-06-01 21:08:16,840 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 21:08:16,895 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-01 21:08:17,157 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Container started: openhands-runtime-426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e. VSCode URL: None
+2025-06-01 21:08:17,158 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Waiting for client to become ready at http://localhost:30953...
+2025-06-01 21:08:35,299 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Runtime is ready.
+2025-06-01 21:08:36,618 - INFO - ------------------------------
+2025-06-01 21:08:36,619 - INFO - BEGIN Runtime Initialization Fn
+2025-06-01 21:08:36,619 - INFO - ------------------------------
+2025-06-01 21:08:36,619 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/graphistry/pygraphistry.git
+2025-06-01 21:08:38,761 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "d3cb84585f1b",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'pygraphistry'...
+remote: Enumerating objects: 24226, done.
+remote: Counting objects: 100% (309/309), done.
+remote: Compressing objects: 100% (194/194), done.
+remote: Total 24226 (delta 179), reused 194 (delta 115), pack-reused 23917 (from 2)
+Receiving objects: 100% (24226/24226), 23.40 MiB | 24.63 MiB/s, done.
+Resolving deltas: 100% (16197/16197), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 21:08:38,762 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd pygraphistry
+2025-06-01 21:08:39,393 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "d3cb84585f1b",
+  "working_dir": "/workspace/pygraphistry",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/pygraphistry]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-01 21:08:39,393 - INFO - ------------------------------
+2025-06-01 21:08:39,394 - INFO - END Runtime Initialization Fn
+2025-06-01 21:08:39,394 - INFO - ------------------------------
+2025-06-01 21:08:39,409 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-01 21:08:39,416 - INFO - Loading user workspace microagents: []
+2025-06-01 21:08:39,416 - WARNING - No search engine API key found, skipping search engine
+2025-06-01 21:08:39,416 - INFO - Added microagent stdio server: fetch
+2025-06-01 21:08:41,086 - INFO - [runtime 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Updated MCP config: []
+2025-06-01 21:08:41,086 - INFO - Initializing MCP agent for url='http://localhost:30953/sse' api_key='******' with SSE connection...
+2025-06-01 21:08:41,103 - INFO - Connected to server with tools: ['fetch']
+2025-06-01 21:08:41,103 - INFO - Connected to MCP server url='http://localhost:30953/sse' api_key='******' via SSE
+2025-06-01 21:08:41,104 - INFO - Disconnected from MCP server
+2025-06-01 21:08:41,104 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-01 21:08:41,104 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-01 21:08:41,104 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-01 21:08:41,104 - INFO - [Agent Controller 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] AgentController 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e - created new state. start_id: 0
+2025-06-01 21:08:41,106 - INFO - [Agent Controller 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-01 21:11:51,566 - INFO - [Agent Controller 426d10a8-38df-48e7-a9c8-86b43afb5198-c9b08ec7b5d9607e] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-01 21:11:52,455 - INFO - ------------------------------
+2025-06-01 21:11:52,455 - INFO - BEGIN Runtime Completion Fn
+2025-06-01 21:11:52,455 - INFO - ------------------------------
+2025-06-01 21:11:52,455 - INFO - ------------------------------
+2025-06-01 21:11:52,455 - INFO - END Runtime Completion Fn
+2025-06-01 21:11:52,455 - INFO - ------------------------------
+2025-06-01 21:11:52,455 - INFO - Got evaluation result for repo 62:
+--------
+{}
+--------
+2025-06-01 21:11:56,218 - INFO - Logging LLM completions for instance 68 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-run_1/llm_completions/68
