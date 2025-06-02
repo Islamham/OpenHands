@@ -12,7 +12,7 @@ N_RUNS=${8}
 CONFIG_PATH=$9
 
 if [ -z "$NUM_WORKERS" ]; then
-  NUM_WORKERS=1
+  NUM_WORKERS=10
   echo "Number of workers not specified, use default $NUM_WORKERS"
 fi
 
@@ -22,8 +22,9 @@ if [ -z "$AGENT" ]; then
 fi
 
 if [ -z "$MAX_ITER" ]; then
-  echo "MAX_ITER not specified, use default 25"
-  MAX_ITER=25
+  MAX_ITER=10
+  echo "MAX_ITER not specified, use default $MAX_ITER"
+  
 fi
 
 if [ -z "$RUN_WITH_BROWSING" ]; then
@@ -34,7 +35,7 @@ fi
 
 if [ -z "$DATASET" ]; then
   echo "DATASET not specified, use default islamham/test-dataset"
-  DATASET="islamham/test-dataset"
+  DATASET="islamham/bugswarm_python"
 fi
 
 
@@ -77,6 +78,8 @@ fi
 if [ -n "$EXP_NAME" ]; then
   EVAL_NOTE="$EVAL_NOTE-$EXP_NAME"
 fi
+EVAL_NOTE="$EVAL_NOTE-numworker_$NUM_WORKERS"
+EVAL_NOTE="$EVAL_NOTE-$(date +%s)"
 
 function run_eval() {
 
@@ -112,5 +115,3 @@ for i in $(seq 1 $N_RUNS); do
   echo "EVAL_NOTE: $current_eval_note"
   run_eval $current_eval_note
 done
-
-

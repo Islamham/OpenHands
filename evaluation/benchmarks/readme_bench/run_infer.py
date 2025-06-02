@@ -306,7 +306,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--dataset',
         type=str,
-        default='islamham/test-project',
+        default='islamham/test-dataset',
         help='dataset to evaluate on, only test split exists for this HF dataset',
     )
     parser.add_argument(
@@ -360,6 +360,6 @@ if __name__ == '__main__':
         output_file,
         args.eval_num_workers,
         process_instance,
-        timeout_seconds=10*60,
-        max_retries=1
+        timeout_seconds=5*60, #for multiple workers only
+        max_retries=1 #+1 total
     )
