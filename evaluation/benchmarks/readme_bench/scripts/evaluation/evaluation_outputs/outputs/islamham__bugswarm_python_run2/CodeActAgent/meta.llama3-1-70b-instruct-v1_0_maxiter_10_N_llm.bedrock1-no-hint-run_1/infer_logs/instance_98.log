@@ -1,0 +1,165 @@
+2025-06-02 01:11:15,186 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-02 01:11:15,245 - INFO - [runtime 94f62dc5-fcda-4eeb-9402-43156673d8de-bf7e308e1e2c41a0] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-02 01:11:15,684 - INFO - [runtime 94f62dc5-fcda-4eeb-9402-43156673d8de-bf7e308e1e2c41a0] Container started: openhands-runtime-94f62dc5-fcda-4eeb-9402-43156673d8de-bf7e308e1e2c41a0. VSCode URL: None
+2025-06-02 01:11:15,684 - INFO - [runtime 94f62dc5-fcda-4eeb-9402-43156673d8de-bf7e308e1e2c41a0] Waiting for client to become ready at http://localhost:31764...
+2025-06-02 01:11:37,810 - INFO - [runtime 94f62dc5-fcda-4eeb-9402-43156673d8de-bf7e308e1e2c41a0] Runtime is ready.
+2025-06-02 01:11:39,105 - INFO - ------------------------------
+2025-06-02 01:11:39,105 - INFO - BEGIN Runtime Initialization Fn
+2025-06-02 01:11:39,105 - INFO - ------------------------------
+2025-06-02 01:11:39,105 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/IHVH/OEMIB_PI01_19_TBOT.git
+2025-06-02 01:11:51,265 - ERROR - Session is being used after close!
+NoneType: None
+Stack (most recent call last):
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 93, in _worker
+    work_item.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 24, in request
+    logger.error(
+2025-06-02 01:11:51,266 - ERROR - [runtime 90354f9e-406a-4533-b130-fc5b250ed21a-6a7fb4bc636e79f0] Unexpected error while running action: ConnectError: [Errno 61] Connection refused
+2025-06-02 01:11:51,266 - ERROR - [runtime 90354f9e-406a-4533-b130-fc5b250ed21a-6a7fb4bc636e79f0] Problematic action: **CmdRunAction (source=EventSource.AGENT, is_input=False)**
+THOUGHT: The installation of Miniconda failed due to an error in extracting the tarball. To resolve this issue, I will try to install Miniconda using a different method.
+COMMAND:
+wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+2025-06-02 01:11:51,266 - ERROR - ConnectError: [Errno 61] Connection refused
+2025-06-02 01:11:51,266 - INFO - [Agent Controller 90354f9e-406a-4533-b130-fc5b250ed21a-6a7fb4bc636e79f0] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-02 01:16:17,157 - ERROR - Function timed out after 300 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 240, in process_instance
+    initialize_runtime(runtime, instance)
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 156, in initialize_runtime
+    obs = runtime.run_action(action)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 31, in request
+    return CLIENT.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 300 seconds
+2025-06-02 01:16:17,162 - INFO - Logging LLM completions for instance 115 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-run_1/llm_completions/115
