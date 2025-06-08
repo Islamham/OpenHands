@@ -12,7 +12,7 @@ N_RUNS=${8}
 CONFIG_PATH=$9
 
 if [ -z "$NUM_WORKERS" ]; then
-  NUM_WORKERS=10
+  NUM_WORKERS=15
   echo "Number of workers not specified, use default $NUM_WORKERS"
 fi
 

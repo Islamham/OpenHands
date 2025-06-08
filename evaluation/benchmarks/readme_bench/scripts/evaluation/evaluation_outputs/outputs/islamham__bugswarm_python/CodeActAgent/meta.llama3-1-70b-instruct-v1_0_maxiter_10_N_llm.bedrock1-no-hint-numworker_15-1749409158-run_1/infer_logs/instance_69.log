@@ -1,0 +1,148 @@
+2025-06-08 12:13:17,683 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 12:13:17,857 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 12:13:19,377 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Container started: openhands-runtime-7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55. VSCode URL: None
+2025-06-08 12:13:19,377 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Waiting for client to become ready at http://localhost:30397...
+2025-06-08 12:13:53,256 - ERROR - Session is being used after close!
+NoneType: None
+Stack (most recent call last):
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 93, in _worker
+    work_item.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 346, in edit
+    return self.send_action_for_execution(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 24, in request
+    logger.error(
+2025-06-08 12:13:53,257 - ERROR - [runtime 39694372-2948-4a91-af39-ba32152eae3a-cd9c62b67f64909c] Unexpected error while running action: ConnectError: [Errno 61] Connection refused
+2025-06-08 12:13:53,257 - ERROR - [runtime 39694372-2948-4a91-af39-ba32152eae3a-cd9c62b67f64909c] Problematic action: **FileEditAction**
+Path: [/workspace/python-tabulate/pyproject.toml]
+Thought: It seems that the version field should be under the `[tool.poetry]` section, not directly under the `[project]` section. Let me edit the `pyproject.toml` file to move the version field to the correct location:
+Command: str_replace
+Old String: ```
+version = "0.8.10"
+```
+New String: ```
+
+```
+
+2025-06-08 12:13:53,258 - ERROR - ConnectError: [Errno 61] Connection refused
+2025-06-08 12:13:53,258 - INFO - [Agent Controller 39694372-2948-4a91-af39-ba32152eae3a-cd9c62b67f64909c] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 12:14:01,650 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Runtime is ready.
+2025-06-08 12:14:02,985 - INFO - ------------------------------
+2025-06-08 12:14:02,985 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 12:14:02,985 - INFO - ------------------------------
+2025-06-08 12:14:02,986 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/spesmilo/electrum.git
+2025-06-08 12:14:10,276 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2aaa76419469",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'electrum'...
+remote: Enumerating objects: 111893, done.
+remote: Counting objects: 100% (591/591), done.
+remote: Compressing objects: 100% (246/246), done.
+remote: Total 111893 (delta 460), reused 351 (delta 345), pack-reused 111302 (from 3)
+Receiving objects: 100% (111893/111893), 65.18 MiB | 24.41 MiB/s, done.
+Resolving deltas: 100% (84678/84678), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 12:14:10,278 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd electrum
+2025-06-08 12:14:10,945 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2aaa76419469",
+  "working_dir": "/workspace/electrum",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/electrum]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 12:14:10,945 - INFO - ------------------------------
+2025-06-08 12:14:10,945 - INFO - END Runtime Initialization Fn
+2025-06-08 12:14:10,945 - INFO - ------------------------------
+2025-06-08 12:14:10,962 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 12:14:10,970 - INFO - Loading user workspace microagents: []
+2025-06-08 12:14:10,970 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 12:14:10,971 - INFO - Added microagent stdio server: fetch
+2025-06-08 12:14:13,845 - INFO - [runtime 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Updated MCP config: []
+2025-06-08 12:14:13,846 - INFO - Initializing MCP agent for url='http://localhost:30397/sse' api_key='******' with SSE connection...
+2025-06-08 12:14:13,895 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 12:14:13,895 - INFO - Connected to MCP server url='http://localhost:30397/sse' api_key='******' via SSE
+2025-06-08 12:14:13,896 - INFO - Disconnected from MCP server
+2025-06-08 12:14:13,896 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 12:14:13,897 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 12:14:13,897 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 12:14:13,897 - INFO - [Agent Controller 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] AgentController 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55 - created new state. start_id: 0
+2025-06-08 12:14:13,902 - INFO - [Agent Controller 7b79ddc9-9502-409d-95d7-b608f9c4fb81-1bf1d8d416232a55] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 12:18:23,377 - ERROR - Function timed out after 300 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 245, in process_instance
+    state: State | None = asyncio.run(
+                          ^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 1961, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/selectors.py", line 566, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 300 seconds
+2025-06-08 12:18:23,388 - INFO - Logging LLM completions for instance 90 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1749409158-run_1/llm_completions/90

@@ -1,0 +1,88 @@
+2025-06-08 12:24:57,045 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 12:24:57,220 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 12:24:58,261 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Container started: openhands-runtime-059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290. VSCode URL: None
+2025-06-08 12:24:58,261 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Waiting for client to become ready at http://localhost:35309...
+2025-06-08 12:25:38,491 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Runtime is ready.
+2025-06-08 12:25:39,849 - INFO - ------------------------------
+2025-06-08 12:25:39,849 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 12:25:39,849 - INFO - ------------------------------
+2025-06-08 12:25:39,850 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/bwhmather/verktyg.git
+2025-06-08 12:25:40,269 - ERROR - [runtime 6f4d8751-1689-4890-9eab-aa67a87117d7-b495fe112d2131b6] Unexpected error while running action: ConnectError: [Errno 61] Connection refused
+2025-06-08 12:25:40,269 - ERROR - [runtime 6f4d8751-1689-4890-9eab-aa67a87117d7-b495fe112d2131b6] Problematic action: **CmdRunAction (source=EventSource.AGENT, is_input=False)**
+THOUGHT: It seems like the previous command was interrupted. Let me try to install the package again:
+COMMAND:
+pip install dist/pytest_jira_xray-0.9.2-py3-none-any.whl
+2025-06-08 12:25:40,269 - ERROR - ConnectError: [Errno 61] Connection refused
+2025-06-08 12:25:40,269 - INFO - [Agent Controller 6f4d8751-1689-4890-9eab-aa67a87117d7-b495fe112d2131b6] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 12:25:40,983 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "3feed1652856",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'verktyg'...
+remote: Enumerating objects: 1922, done.
+remote: Total 1922 (delta 0), reused 0 (delta 0), pack-reused 1922 (from 1)
+Receiving objects: 100% (1922/1922), 464.00 KiB | 2.02 MiB/s, done.
+Resolving deltas: 100% (1349/1349), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 12:25:40,983 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd verktyg
+2025-06-08 12:25:41,604 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "3feed1652856",
+  "working_dir": "/workspace/verktyg",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/verktyg]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 12:25:41,604 - INFO - ------------------------------
+2025-06-08 12:25:41,604 - INFO - END Runtime Initialization Fn
+2025-06-08 12:25:41,604 - INFO - ------------------------------
+2025-06-08 12:25:41,625 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 12:25:41,631 - INFO - Loading user workspace microagents: []
+2025-06-08 12:25:41,631 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 12:25:41,631 - INFO - Added microagent stdio server: fetch
+2025-06-08 12:25:44,000 - INFO - [runtime 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Updated MCP config: []
+2025-06-08 12:25:44,000 - INFO - Initializing MCP agent for url='http://localhost:35309/sse' api_key='******' with SSE connection...
+2025-06-08 12:25:44,031 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 12:25:44,031 - INFO - Connected to MCP server url='http://localhost:35309/sse' api_key='******' via SSE
+2025-06-08 12:25:44,032 - INFO - Disconnected from MCP server
+2025-06-08 12:25:44,032 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 12:25:44,032 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 12:25:44,032 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 12:25:44,032 - INFO - [Agent Controller 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] AgentController 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290 - created new state. start_id: 0
+2025-06-08 12:25:44,036 - INFO - [Agent Controller 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 12:26:08,716 - INFO - [Agent Controller 059582f7-b812-463e-819c-de20b341d8bc-f716972d34d2e290] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-08 12:26:09,058 - INFO - ------------------------------
+2025-06-08 12:26:09,058 - INFO - BEGIN Runtime Completion Fn
+2025-06-08 12:26:09,058 - INFO - ------------------------------
+2025-06-08 12:26:09,058 - INFO - ------------------------------
+2025-06-08 12:26:09,058 - INFO - END Runtime Completion Fn
+2025-06-08 12:26:09,058 - INFO - ------------------------------
+2025-06-08 12:26:09,059 - INFO - Got evaluation result for repo 117:
+--------
+{}
+--------
+2025-06-08 12:26:13,196 - INFO - Logging LLM completions for instance 122 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1749409158-run_1/llm_completions/122
