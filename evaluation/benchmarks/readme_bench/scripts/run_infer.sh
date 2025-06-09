@@ -12,7 +12,7 @@ N_RUNS=${8}
 CONFIG_PATH=$9
 
 if [ -z "$NUM_WORKERS" ]; then
-  NUM_WORKERS=15
+  NUM_WORKERS=10
   echo "Number of workers not specified, use default $NUM_WORKERS"
 fi
 
@@ -22,7 +22,7 @@ if [ -z "$AGENT" ]; then
 fi
 
 if [ -z "$MAX_ITER" ]; then
-  MAX_ITER=10
+  MAX_ITER=20
   echo "MAX_ITER not specified, use default $MAX_ITER"
   
 fi
@@ -34,8 +34,8 @@ fi
 
 
 if [ -z "$DATASET" ]; then
-  echo "DATASET not specified, use default islamham/test-dataset"
-  DATASET="islamham/bugswarm_python"
+  DATASET="islamham/bugswarm_maven_lite"
+  echo "DATASET not specified, use default $DATASET"
 fi
 
 

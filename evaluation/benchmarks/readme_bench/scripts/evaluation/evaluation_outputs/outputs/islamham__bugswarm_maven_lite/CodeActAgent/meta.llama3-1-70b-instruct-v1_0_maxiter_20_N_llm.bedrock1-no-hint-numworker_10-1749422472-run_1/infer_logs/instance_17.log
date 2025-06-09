@@ -1,0 +1,148 @@
+2025-06-08 15:55:27,140 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 15:55:27,177 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 15:55:27,513 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Container started: openhands-runtime-d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526. VSCode URL: None
+2025-06-08 15:55:27,513 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Waiting for client to become ready at http://localhost:35321...
+2025-06-08 15:55:49,695 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Runtime is ready.
+2025-06-08 15:55:50,999 - INFO - ------------------------------
+2025-06-08 15:55:51,000 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 15:55:51,000 - INFO - ------------------------------
+2025-06-08 15:55:51,000 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/Azure/azure-sdk-for-java.git
+2025-06-08 15:58:38,052 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "415c26036efc",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'azure-sdk-for-java'...
+remote: Enumerating objects: 1903704, done.
+remote: Counting objects: 100% (4397/4397), done.
+remote: Compressing objects: 100% (1313/1313), done.
+remote: Total 1903704 (delta 3621), reused 3084 (delta 3084), pack-reused 1899307 (from 2)
+Receiving objects: 100% (1903704/1903704), 3.09 GiB | 22.60 MiB/s, done.
+Resolving deltas: 100% (1353719/1353719), done.
+Updating files: 100% (103854/103854), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 15:58:38,054 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd azure-sdk-for-java
+2025-06-08 15:58:38,671 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "415c26036efc",
+  "working_dir": "/workspace/azure-sdk-for-java",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/azure-sdk-for-java]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 15:58:38,671 - INFO - ------------------------------
+2025-06-08 15:58:38,672 - INFO - END Runtime Initialization Fn
+2025-06-08 15:58:38,672 - INFO - ------------------------------
+2025-06-08 15:58:38,703 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 15:58:38,708 - INFO - Loading user workspace microagents: []
+2025-06-08 15:58:38,709 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 15:58:38,709 - INFO - Added microagent stdio server: fetch
+2025-06-08 15:58:40,671 - INFO - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Updated MCP config: []
+2025-06-08 15:58:40,672 - INFO - Initializing MCP agent for url='http://localhost:35321/sse' api_key='******' with SSE connection...
+2025-06-08 15:58:40,710 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 15:58:40,710 - INFO - Connected to MCP server url='http://localhost:35321/sse' api_key='******' via SSE
+2025-06-08 15:58:40,711 - INFO - Disconnected from MCP server
+2025-06-08 15:58:40,711 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 15:58:40,711 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 15:58:40,711 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 15:58:40,712 - INFO - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] AgentController d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526 - created new state. start_id: 0
+2025-06-08 15:58:40,715 - INFO - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 16:01:20,075 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 91.98s: CmdRunAction (id=13)
+2025-06-08 16:01:20,080 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 91.98s: CmdRunAction (id=13)
+2025-06-08 16:08:12,146 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 301.17s: CmdRunAction (id=17)
+2025-06-08 16:08:12,148 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 301.18s: CmdRunAction (id=17)
+2025-06-08 16:11:41,258 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 113.00s: CmdRunAction (id=21)
+2025-06-08 16:11:41,259 - WARNING - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Pending action active for 113.00s: CmdRunAction (id=21)
+2025-06-08 16:15:28,669 - ERROR - Session is being used after close!
+NoneType: None
+Stack (most recent call last):
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 93, in _worker
+    work_item.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 24, in request
+    logger.error(
+2025-06-08 16:15:28,703 - ERROR - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Unexpected error while running action: ReadError: [Errno 54] Connection reset by peer
+2025-06-08 16:15:28,703 - ERROR - [runtime d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Problematic action: **CmdRunAction (source=EventSource.AGENT, is_input=False)**
+THOUGHT: The Maven build was interrupted by a CTRL+C signal, which caused the build to fail. Let me try to resume the build from where it left off:
+COMMAND:
+mvn clean package -Dmaven.javadoc.skip=true -Dmaven.test.timeout=600 -rf :azure-client-sdk-parent
+2025-06-08 16:15:28,705 - ERROR - ReadError: [Errno 54] Connection reset by peer
+2025-06-08 16:15:28,705 - INFO - [Agent Controller d9ba5983-c231-4d9b-bb69-7eddeb1bd8bd-7f74e02178520526] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 16:15:31,061 - ERROR - Function timed out after 1200 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 245, in process_instance
+    state: State | None = asyncio.run(
+                          ^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 1961, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/selectors.py", line 566, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 1200 seconds
+2025-06-08 16:15:31,069 - INFO - Logging LLM completions for instance 29 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1749422472-run_1/llm_completions/29

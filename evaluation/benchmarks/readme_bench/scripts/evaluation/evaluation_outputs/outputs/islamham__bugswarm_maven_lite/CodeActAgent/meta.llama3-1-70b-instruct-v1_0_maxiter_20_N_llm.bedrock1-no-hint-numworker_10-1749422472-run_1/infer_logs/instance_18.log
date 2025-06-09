@@ -1,0 +1,88 @@
+2025-06-08 15:56:03,173 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 15:56:03,195 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 15:56:03,586 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Container started: openhands-runtime-9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13. VSCode URL: None
+2025-06-08 15:56:03,586 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Waiting for client to become ready at http://localhost:30823...
+2025-06-08 15:56:25,696 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Runtime is ready.
+2025-06-08 15:56:26,989 - INFO - ------------------------------
+2025-06-08 15:56:26,990 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 15:56:26,990 - INFO - ------------------------------
+2025-06-08 15:56:26,990 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/ProjectKorra/ProjectKorra.git
+2025-06-08 15:56:40,692 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "5b4b85a77b03",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'ProjectKorra'...
+remote: Enumerating objects: 26126, done.
+remote: Counting objects: 100% (524/524), done.
+remote: Compressing objects: 100% (399/399), done.
+remote: Total 26126 (delta 327), reused 122 (delta 121), pack-reused 25602 (from 3)
+Receiving objects: 100% (26126/26126), 213.91 MiB | 17.44 MiB/s, done.
+Resolving deltas: 100% (15322/15322), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 15:56:40,694 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd ProjectKorra
+2025-06-08 15:56:41,308 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "5b4b85a77b03",
+  "working_dir": "/workspace/ProjectKorra",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/ProjectKorra]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 15:56:41,308 - INFO - ------------------------------
+2025-06-08 15:56:41,308 - INFO - END Runtime Initialization Fn
+2025-06-08 15:56:41,308 - INFO - ------------------------------
+2025-06-08 15:56:41,331 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 15:56:41,336 - INFO - Loading user workspace microagents: []
+2025-06-08 15:56:41,336 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 15:56:41,336 - INFO - Added microagent stdio server: fetch
+2025-06-08 15:56:43,252 - INFO - [runtime 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Updated MCP config: []
+2025-06-08 15:56:43,253 - INFO - Initializing MCP agent for url='http://localhost:30823/sse' api_key='******' with SSE connection...
+2025-06-08 15:56:43,279 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 15:56:43,279 - INFO - Connected to MCP server url='http://localhost:30823/sse' api_key='******' via SSE
+2025-06-08 15:56:43,280 - INFO - Disconnected from MCP server
+2025-06-08 15:56:43,280 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 15:56:43,280 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 15:56:43,280 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 15:56:43,280 - INFO - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] AgentController 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13 - created new state. start_id: 0
+2025-06-08 15:56:43,284 - INFO - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 16:00:53,253 - WARNING - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Pending action active for 182.68s: CmdRunAction (id=13)
+2025-06-08 16:00:53,255 - WARNING - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Pending action active for 182.68s: CmdRunAction (id=13)
+2025-06-08 16:08:16,519 - WARNING - Action, Observation loop detected
+2025-06-08 16:08:16,520 - ERROR - AgentStuckInLoopError: Agent got stuck in a loop
+2025-06-08 16:08:16,520 - INFO - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 16:08:16,521 - INFO - [Agent Controller 9c2f623f-259d-4f25-af4b-c18cd8917ebe-d3113e587280bf13] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+2025-06-08 16:08:16,997 - INFO - ------------------------------
+2025-06-08 16:08:16,997 - INFO - BEGIN Runtime Completion Fn
+2025-06-08 16:08:16,997 - INFO - ------------------------------
+2025-06-08 16:08:16,997 - INFO - ------------------------------
+2025-06-08 16:08:16,997 - INFO - END Runtime Completion Fn
+2025-06-08 16:08:16,997 - INFO - ------------------------------
+2025-06-08 16:08:16,998 - INFO - Got evaluation result for repo 18:
+--------
+{}
+--------
+2025-06-08 16:08:21,882 - INFO - Logging LLM completions for instance 28 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1749422472-run_1/llm_completions/28

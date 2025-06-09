@@ -1,0 +1,92 @@
+2025-06-08 16:00:53,015 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 16:00:53,076 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 16:00:53,433 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Container started: openhands-runtime-891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90. VSCode URL: None
+2025-06-08 16:00:53,433 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Waiting for client to become ready at http://localhost:39967...
+2025-06-08 16:01:17,576 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Runtime is ready.
+2025-06-08 16:01:18,879 - INFO - ------------------------------
+2025-06-08 16:01:18,879 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 16:01:18,879 - INFO - ------------------------------
+2025-06-08 16:01:18,879 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/mybatis/mybatis-3.git
+2025-06-08 16:01:31,582 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "3d9be8f0ddc0",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'mybatis-3'...
+remote: Enumerating objects: 547973, done.
+remote: Counting objects: 100% (749/749), done.
+remote: Compressing objects: 100% (244/244), done.
+remote: Total 547973 (delta 638), reused 505 (delta 505), pack-reused 547224 (from 3)
+Receiving objects: 100% (547973/547973), 154.70 MiB | 22.17 MiB/s, done.
+Resolving deltas: 100% (473338/473338), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 16:01:31,584 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd mybatis-3
+2025-06-08 16:01:32,212 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "3d9be8f0ddc0",
+  "working_dir": "/workspace/mybatis-3",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/mybatis-3]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 16:01:32,213 - INFO - ------------------------------
+2025-06-08 16:01:32,213 - INFO - END Runtime Initialization Fn
+2025-06-08 16:01:32,213 - INFO - ------------------------------
+2025-06-08 16:01:32,242 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 16:01:32,247 - INFO - Loading user workspace microagents: []
+2025-06-08 16:01:32,247 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 16:01:32,247 - INFO - Added microagent stdio server: fetch
+2025-06-08 16:01:34,355 - INFO - [runtime 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Updated MCP config: []
+2025-06-08 16:01:34,355 - INFO - Initializing MCP agent for url='http://localhost:39967/sse' api_key='******' with SSE connection...
+2025-06-08 16:01:34,386 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 16:01:34,386 - INFO - Connected to MCP server url='http://localhost:39967/sse' api_key='******' via SSE
+2025-06-08 16:01:34,387 - INFO - Disconnected from MCP server
+2025-06-08 16:01:34,387 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 16:01:34,387 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 16:01:34,387 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 16:01:34,388 - INFO - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] AgentController 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90 - created new state. start_id: 0
+2025-06-08 16:01:34,392 - INFO - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 16:11:33,922 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 303.76s: CmdRunAction (id=37)
+2025-06-08 16:11:33,923 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 303.76s: CmdRunAction (id=37)
+2025-06-08 16:13:26,943 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 67.12s: CmdRunAction (id=39)
+2025-06-08 16:13:26,943 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 67.12s: CmdRunAction (id=39)
+2025-06-08 16:16:33,428 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 140.34s: CmdRunAction (id=41)
+2025-06-08 16:16:33,429 - WARNING - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Pending action active for 140.34s: CmdRunAction (id=41)
+2025-06-08 16:17:20,034 - ERROR - RuntimeError: Agent reached maximum iteration in headless mode. Current iteration: 20, max iteration: 20
+2025-06-08 16:17:20,034 - INFO - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 16:17:20,035 - WARNING - Stopping agent due to traffic control
+2025-06-08 16:17:20,035 - INFO - [Agent Controller 891ab7df-a1b4-4958-84aa-c37a2d1d1835-c0b467678f81bf90] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+2025-06-08 16:17:20,273 - INFO - ------------------------------
+2025-06-08 16:17:20,273 - INFO - BEGIN Runtime Completion Fn
+2025-06-08 16:17:20,273 - INFO - ------------------------------
+2025-06-08 16:17:20,273 - INFO - ------------------------------
+2025-06-08 16:17:20,273 - INFO - END Runtime Completion Fn
+2025-06-08 16:17:20,273 - INFO - ------------------------------
+2025-06-08 16:17:20,276 - INFO - Got evaluation result for repo 22:
+--------
+{}
+--------
+2025-06-08 16:17:24,201 - INFO - Logging LLM completions for instance 31 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1749422472-run_1/llm_completions/31

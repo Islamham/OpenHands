@@ -1,0 +1,83 @@
+2025-06-08 18:17:15,529 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 18:17:15,580 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 18:17:16,014 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Container started: openhands-runtime-ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc. VSCode URL: None
+2025-06-08 18:17:16,014 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Waiting for client to become ready at http://localhost:34629...
+2025-06-08 18:17:38,188 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Runtime is ready.
+2025-06-08 18:17:39,502 - INFO - ------------------------------
+2025-06-08 18:17:39,502 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 18:17:39,502 - INFO - ------------------------------
+2025-06-08 18:17:39,507 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/sannies/mp4parser.git
+2025-06-08 18:17:43,644 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "dddae1ba47e1",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'mp4parser'...
+remote: Enumerating objects: 24803, done.
+remote: Counting objects: 100% (1395/1395), done.
+remote: Compressing objects: 100% (126/126), done.
+remote: Total 24803 (delta 1327), reused 1269 (delta 1269), pack-reused 23408 (from 1)
+Receiving objects: 100% (24803/24803), 52.30 MiB | 20.24 MiB/s, done.
+Resolving deltas: 100% (12890/12890), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 18:17:43,645 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd mp4parser
+2025-06-08 18:17:44,264 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "dddae1ba47e1",
+  "working_dir": "/workspace/mp4parser",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/mp4parser]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 18:17:44,265 - INFO - ------------------------------
+2025-06-08 18:17:44,265 - INFO - END Runtime Initialization Fn
+2025-06-08 18:17:44,265 - INFO - ------------------------------
+2025-06-08 18:17:44,290 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 18:17:44,294 - INFO - Loading user workspace microagents: []
+2025-06-08 18:17:44,295 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 18:17:44,295 - INFO - Added microagent stdio server: fetch
+2025-06-08 18:17:46,113 - INFO - [runtime ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Updated MCP config: []
+2025-06-08 18:17:46,114 - INFO - Initializing MCP agent for url='http://localhost:34629/sse' api_key='******' with SSE connection...
+2025-06-08 18:17:46,137 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 18:17:46,137 - INFO - Connected to MCP server url='http://localhost:34629/sse' api_key='******' via SSE
+2025-06-08 18:17:46,138 - INFO - Disconnected from MCP server
+2025-06-08 18:17:46,138 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 18:17:46,138 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 18:17:46,138 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 18:17:46,138 - INFO - [Agent Controller ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] AgentController ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc - created new state. start_id: 0
+2025-06-08 18:17:46,140 - INFO - [Agent Controller ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 18:22:15,558 - INFO - [Agent Controller ae9d896f-944f-4b7f-82a4-5aae06459cd7-c1c712dde86662cc] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-08 18:22:16,415 - INFO - ------------------------------
+2025-06-08 18:22:16,415 - INFO - BEGIN Runtime Completion Fn
+2025-06-08 18:22:16,415 - INFO - ------------------------------
+2025-06-08 18:22:16,415 - INFO - ------------------------------
+2025-06-08 18:22:16,415 - INFO - END Runtime Completion Fn
+2025-06-08 18:22:16,415 - INFO - ------------------------------
+2025-06-08 18:22:16,418 - INFO - Got evaluation result for repo 29:
+--------
+{}
+--------
+2025-06-08 18:22:19,078 - INFO - Logging LLM completions for instance 35 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1749430371-run_1/llm_completions/35

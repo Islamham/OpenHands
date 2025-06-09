@@ -1,0 +1,129 @@
+2025-06-08 16:01:26,465 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 16:01:26,492 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-08 16:01:26,890 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Container started: openhands-runtime-1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6. VSCode URL: None
+2025-06-08 16:01:26,890 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Waiting for client to become ready at http://localhost:39319...
+2025-06-08 16:01:49,016 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Runtime is ready.
+2025-06-08 16:01:50,312 - INFO - ------------------------------
+2025-06-08 16:01:50,312 - INFO - BEGIN Runtime Initialization Fn
+2025-06-08 16:01:50,313 - INFO - ------------------------------
+2025-06-08 16:01:50,313 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/square/wire.git
+2025-06-08 16:01:53,444 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "17cfb3c0acb4",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'wire'...
+remote: Enumerating objects: 88423, done.
+remote: Counting objects: 100% (1553/1553), done.
+remote: Compressing objects: 100% (123/123), done.
+remote: Total 88423 (delta 1479), reused 1430 (delta 1430), pack-reused 86870 (from 3)
+Receiving objects: 100% (88423/88423), 22.26 MiB | 16.96 MiB/s, done.
+Resolving deltas: 100% (38697/38697), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 16:01:53,445 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd wire
+2025-06-08 16:01:54,057 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "17cfb3c0acb4",
+  "working_dir": "/workspace/wire",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/wire]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-08 16:01:54,058 - INFO - ------------------------------
+2025-06-08 16:01:54,058 - INFO - END Runtime Initialization Fn
+2025-06-08 16:01:54,058 - INFO - ------------------------------
+2025-06-08 16:01:54,090 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-08 16:01:54,094 - INFO - Loading user workspace microagents: []
+2025-06-08 16:01:54,095 - WARNING - No search engine API key found, skipping search engine
+2025-06-08 16:01:54,095 - INFO - Added microagent stdio server: fetch
+2025-06-08 16:01:56,253 - INFO - [runtime 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Updated MCP config: []
+2025-06-08 16:01:56,253 - INFO - Initializing MCP agent for url='http://localhost:39319/sse' api_key='******' with SSE connection...
+2025-06-08 16:01:56,285 - INFO - Connected to server with tools: ['fetch']
+2025-06-08 16:01:56,286 - INFO - Connected to MCP server url='http://localhost:39319/sse' api_key='******' via SSE
+2025-06-08 16:01:56,286 - INFO - Disconnected from MCP server
+2025-06-08 16:01:56,286 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-08 16:01:56,286 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-08 16:01:56,286 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-08 16:01:56,287 - INFO - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] AgentController 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6 - created new state. start_id: 0
+2025-06-08 16:01:56,291 - INFO - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-08 16:02:10,297 - ERROR - Session is being used after close!
+NoneType: None
+Stack (most recent call last):
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1032, in _bootstrap
+    self._bootstrap_inner()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 93, in _worker
+    work_item.run()
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/async_utils.py", line 17, in <lambda>
+    coro = loop.run_in_executor(None, lambda: fn(*args, **kwargs))
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 24, in request
+    logger.error(
+2025-06-08 16:02:10,299 - ERROR - [runtime aedbec06-794e-4a2a-807b-989781bb7dd3-682878ff56d603b1] Unexpected error while running action: ConnectError: [Errno 61] Connection refused
+2025-06-08 16:02:10,299 - ERROR - [runtime aedbec06-794e-4a2a-807b-989781bb7dd3-682878ff56d603b1] Problematic action: **CmdRunAction (source=EventSource.AGENT, is_input=False)**
+THOUGHT: It seems that the bash session was interrupted, and the last action was not processed correctly. Let's try to run the project again with the -e switch to see the full stack trace of the errors:
+COMMAND:
+mvn clean package -e
+2025-06-08 16:02:10,299 - ERROR - ConnectError: [Errno 61] Connection refused
+2025-06-08 16:02:10,299 - INFO - [Agent Controller aedbec06-794e-4a2a-807b-989781bb7dd3-682878ff56d603b1] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-08 16:09:22,985 - WARNING - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Pending action active for 288.46s: CmdRunAction (id=19)
+2025-06-08 16:09:22,986 - WARNING - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Pending action active for 288.46s: CmdRunAction (id=19)
+2025-06-08 16:14:55,132 - WARNING - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Pending action active for 240.60s: CmdRunAction (id=23)
+2025-06-08 16:14:55,136 - WARNING - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Pending action active for 240.60s: CmdRunAction (id=23)
+2025-06-08 16:18:10,341 - INFO - [Agent Controller 1d9cc30d-f6e9-49b1-b8b9-629244a1e4cb-565b77bbb1cf71e6] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-08 16:18:11,226 - INFO - ------------------------------
+2025-06-08 16:18:11,226 - INFO - BEGIN Runtime Completion Fn
+2025-06-08 16:18:11,226 - INFO - ------------------------------
+2025-06-08 16:18:11,226 - INFO - ------------------------------
+2025-06-08 16:18:11,226 - INFO - END Runtime Completion Fn
+2025-06-08 16:18:11,226 - INFO - ------------------------------
+2025-06-08 16:18:11,229 - INFO - Got evaluation result for repo 23:
+--------
+{}
+--------
+2025-06-08 16:18:14,473 - INFO - Logging LLM completions for instance 33 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1749422472-run_1/llm_completions/33
