@@ -1,0 +1,84 @@
+2025-06-16 00:00:02,245 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:00:02,313 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:00:03,886 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Container started: openhands-runtime-0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f. VSCode URL: None
+2025-06-16 00:00:03,886 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Waiting for client to become ready at http://localhost:36558...
+2025-06-16 00:00:44,244 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Runtime is ready.
+2025-06-16 00:00:45,554 - INFO - ------------------------------
+2025-06-16 00:00:45,554 - INFO - BEGIN Runtime Initialization Fn
+2025-06-16 00:00:45,555 - INFO - ------------------------------
+2025-06-16 00:00:45,556 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/hhursev/recipe-scrapers.git
+2025-06-16 00:00:53,758 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "28ecf5313291",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'recipe-scrapers'...
+remote: Enumerating objects: 24353, done.
+remote: Counting objects: 100% (747/747), done.
+remote: Compressing objects: 100% (367/367), done.
+remote: Total 24353 (delta 593), reused 391 (delta 379), pack-reused 23606 (from 2)
+Receiving objects: 100% (24353/24353), 67.78 MiB | 12.00 MiB/s, done.
+Resolving deltas: 100% (15938/15938), done.
+Updating files: 100% (1983/1983), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:00:53,760 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd recipe-scrapers
+2025-06-16 00:00:54,379 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "28ecf5313291",
+  "working_dir": "/workspace/recipe-scrapers",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/recipe-scrapers]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:00:54,379 - INFO - ------------------------------
+2025-06-16 00:00:54,380 - INFO - END Runtime Initialization Fn
+2025-06-16 00:00:54,380 - INFO - ------------------------------
+2025-06-16 00:00:54,429 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-16 00:00:54,434 - INFO - Loading user workspace microagents: []
+2025-06-16 00:00:54,434 - WARNING - No search engine API key found, skipping search engine
+2025-06-16 00:00:54,435 - INFO - Added microagent stdio server: fetch
+2025-06-16 00:00:57,276 - INFO - [runtime 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Updated MCP config: []
+2025-06-16 00:00:57,276 - INFO - Initializing MCP agent for url='http://localhost:36558/sse' api_key='******' with SSE connection...
+2025-06-16 00:00:57,336 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:00:57,337 - INFO - Connected to MCP server url='http://localhost:36558/sse' api_key='******' via SSE
+2025-06-16 00:00:57,338 - INFO - Disconnected from MCP server
+2025-06-16 00:00:57,338 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-16 00:00:57,338 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-16 00:00:57,338 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-16 00:00:57,339 - INFO - [Agent Controller 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] AgentController 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f - created new state. start_id: 0
+2025-06-16 00:00:57,345 - INFO - [Agent Controller 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-16 00:03:01,267 - INFO - [Agent Controller 0c30deb1-b5ab-4ce0-b248-cf02a3f630f0-7942a4d0be8a701f] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-16 00:03:01,552 - INFO - ------------------------------
+2025-06-16 00:03:01,553 - INFO - BEGIN Runtime Completion Fn
+2025-06-16 00:03:01,553 - INFO - ------------------------------
+2025-06-16 00:03:01,553 - INFO - ------------------------------
+2025-06-16 00:03:01,553 - INFO - END Runtime Completion Fn
+2025-06-16 00:03:01,553 - INFO - ------------------------------
+2025-06-16 00:03:01,554 - INFO - Got evaluation result for repo 45:
+--------
+{}
+--------
+2025-06-16 00:03:05,714 - INFO - Logging LLM completions for instance 57 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/57

@@ -1,0 +1,91 @@
+2025-06-16 00:10:56,822 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:10:56,907 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:10:58,287 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Container started: openhands-runtime-b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f. VSCode URL: None
+2025-06-16 00:10:58,287 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Waiting for client to become ready at http://localhost:34699...
+2025-06-16 00:11:50,880 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Runtime is ready.
+2025-06-16 00:11:52,316 - INFO - ------------------------------
+2025-06-16 00:11:52,316 - INFO - BEGIN Runtime Initialization Fn
+2025-06-16 00:11:52,316 - INFO - ------------------------------
+2025-06-16 00:11:52,318 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/progressivis/progressivis.git
+2025-06-16 00:11:56,035 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c1cadf8520f8",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'progressivis'...
+remote: Enumerating objects: 19669, done.
+remote: Counting objects: 100% (335/335), done.
+remote: Compressing objects: 100% (205/205), done.
+remote: Total 19669 (delta 218), reused 182 (delta 129), pack-reused 19334 (from 3)
+Receiving objects: 100% (19669/19669), 18.26 MiB | 16.00 MiB/s, done.
+Resolving deltas: 100% (15276/15276), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:11:56,036 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd progressivis
+2025-06-16 00:11:56,678 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c1cadf8520f8",
+  "working_dir": "/workspace/progressivis",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/progressivis]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:11:56,678 - INFO - ------------------------------
+2025-06-16 00:11:56,678 - INFO - END Runtime Initialization Fn
+2025-06-16 00:11:56,678 - INFO - ------------------------------
+2025-06-16 00:11:56,701 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-16 00:11:56,724 - INFO - Loading user workspace microagents: []
+2025-06-16 00:11:56,724 - WARNING - No search engine API key found, skipping search engine
+2025-06-16 00:11:56,725 - INFO - Added microagent stdio server: fetch
+2025-06-16 00:12:02,316 - INFO - [runtime b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Updated MCP config: []
+2025-06-16 00:12:02,317 - INFO - Initializing MCP agent for url='http://localhost:34699/sse' api_key='******' with SSE connection...
+2025-06-16 00:12:02,399 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:12:02,399 - INFO - Connected to MCP server url='http://localhost:34699/sse' api_key='******' via SSE
+2025-06-16 00:12:02,399 - INFO - Disconnected from MCP server
+2025-06-16 00:12:02,400 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-16 00:12:02,400 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-16 00:12:02,400 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-16 00:12:02,401 - INFO - [Agent Controller b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] AgentController b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f - created new state. start_id: 0
+2025-06-16 00:12:02,405 - INFO - [Agent Controller b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-16 00:12:13,615 - INFO - Initializing MCP agent for url='http://localhost:34699/sse' api_key='******' with SSE connection...
+2025-06-16 00:12:13,697 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:12:13,697 - INFO - Connected to MCP server url='http://localhost:34699/sse' api_key='******' via SSE
+2025-06-16 00:12:13,698 - INFO - Initializing MCP agent for url='http://localhost:34699/sse' api_key='******' with SSE connection...
+2025-06-16 00:12:13,737 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:12:13,737 - INFO - Connected to MCP server url='http://localhost:34699/sse' api_key='******' via SSE
+2025-06-16 00:12:26,506 - INFO - Disconnected from MCP server
+2025-06-16 00:12:26,507 - INFO - Disconnected from MCP server
+2025-06-16 00:15:06,417 - INFO - [Agent Controller b4559e18-d37d-4db8-ada7-65e29fa5ba78-92e3ee95eb4d802f] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-16 00:15:06,729 - INFO - ------------------------------
+2025-06-16 00:15:06,729 - INFO - BEGIN Runtime Completion Fn
+2025-06-16 00:15:06,729 - INFO - ------------------------------
+2025-06-16 00:15:06,730 - INFO - ------------------------------
+2025-06-16 00:15:06,730 - INFO - END Runtime Completion Fn
+2025-06-16 00:15:06,730 - INFO - ------------------------------
+2025-06-16 00:15:06,733 - INFO - Got evaluation result for repo 91:
+--------
+{}
+--------
+2025-06-16 00:15:21,702 - INFO - Logging LLM completions for instance 107 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/107

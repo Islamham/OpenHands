@@ -1,0 +1,99 @@
+2025-06-16 00:14:59,855 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:14:59,934 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:15:01,674 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Container started: openhands-runtime-2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f. VSCode URL: None
+2025-06-16 00:15:01,674 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Waiting for client to become ready at http://localhost:33339...
+2025-06-16 00:16:53,022 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Runtime is ready.
+2025-06-16 00:16:53,966 - INFO - ------------------------------
+2025-06-16 00:16:53,966 - INFO - BEGIN Runtime Initialization Fn
+2025-06-16 00:16:53,966 - INFO - ------------------------------
+2025-06-16 00:16:53,968 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/microsoft/TaskWeaver.git
+2025-06-16 00:17:00,343 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "817fff3ab240",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'TaskWeaver'...
+remote: Enumerating objects: 15927, done.
+remote: Counting objects: 100% (2808/2808), done.
+remote: Compressing objects: 100% (691/691), done.
+remote: Total 15927 (delta 2453), reused 2138 (delta 2062), pack-reused 13119 (from 2)
+Receiving objects: 100% (15927/15927), 31.68 MiB | 18.44 MiB/s, done.
+Resolving deltas: 100% (9033/9033), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:17:00,345 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd TaskWeaver
+2025-06-16 00:17:00,516 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "817fff3ab240",
+  "working_dir": "/workspace/TaskWeaver",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/TaskWeaver]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:17:00,517 - INFO - ------------------------------
+2025-06-16 00:17:00,517 - INFO - END Runtime Initialization Fn
+2025-06-16 00:17:00,517 - INFO - ------------------------------
+2025-06-16 00:17:00,580 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-16 00:17:00,601 - INFO - Loading user workspace microagents: []
+2025-06-16 00:17:00,602 - WARNING - No search engine API key found, skipping search engine
+2025-06-16 00:17:00,603 - INFO - Added microagent stdio server: fetch
+2025-06-16 00:17:05,359 - INFO - [runtime 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Updated MCP config: []
+2025-06-16 00:17:05,374 - INFO - Initializing MCP agent for url='http://localhost:33339/sse' api_key='******' with SSE connection...
+2025-06-16 00:17:05,610 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:17:05,611 - INFO - Connected to MCP server url='http://localhost:33339/sse' api_key='******' via SSE
+2025-06-16 00:17:05,612 - INFO - Disconnected from MCP server
+2025-06-16 00:17:05,612 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-16 00:17:05,613 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-16 00:17:05,613 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-16 00:17:05,616 - INFO - [Agent Controller 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] AgentController 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f - created new state. start_id: 0
+2025-06-16 00:17:05,627 - INFO - [Agent Controller 2e1b7ac7-f8d2-4a39-a0d0-2d94d9086eb2-cb2e2f1c8ddb546f] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-16 00:20:09,769 - ERROR - Function timed out after 300 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 259, in process_instance
+    state: State | None = asyncio.run(
+                          ^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 1961, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/selectors.py", line 566, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 300 seconds
+2025-06-16 00:20:09,782 - INFO - Logging LLM completions for instance 126 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/126

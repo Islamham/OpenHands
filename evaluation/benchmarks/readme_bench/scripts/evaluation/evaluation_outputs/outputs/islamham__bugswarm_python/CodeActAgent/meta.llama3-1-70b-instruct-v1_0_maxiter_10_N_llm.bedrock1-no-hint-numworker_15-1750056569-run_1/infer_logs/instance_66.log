@@ -1,0 +1,84 @@
+2025-06-16 00:05:06,966 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:05:07,046 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:05:07,792 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Container started: openhands-runtime-bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec. VSCode URL: None
+2025-06-16 00:05:07,792 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Waiting for client to become ready at http://localhost:32157...
+2025-06-16 00:05:28,782 - INFO - [Agent Controller 9d44d620-fd93-4042-9a6c-4acab4f8c60f-c7a8275648b40f2a] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-16 00:05:38,023 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Runtime is ready.
+2025-06-16 00:05:38,836 - INFO - ------------------------------
+2025-06-16 00:05:38,836 - INFO - BEGIN Runtime Initialization Fn
+2025-06-16 00:05:38,836 - INFO - ------------------------------
+2025-06-16 00:05:38,837 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/spesmilo/electrum.git
+2025-06-16 00:05:45,518 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "478f86751119",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'electrum'...
+remote: Enumerating objects: 112386, done.
+remote: Counting objects: 100% (862/862), done.
+remote: Compressing objects: 100% (350/350), done.
+remote: Total 112386 (delta 694), reused 512 (delta 512), pack-reused 111524 (from 4)
+Receiving objects: 100% (112386/112386), 65.16 MiB | 17.39 MiB/s, done.
+Resolving deltas: 100% (85057/85057), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:05:45,520 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd electrum
+2025-06-16 00:05:45,659 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "478f86751119",
+  "working_dir": "/workspace/electrum",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/electrum]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:05:45,659 - INFO - ------------------------------
+2025-06-16 00:05:45,659 - INFO - END Runtime Initialization Fn
+2025-06-16 00:05:45,659 - INFO - ------------------------------
+2025-06-16 00:05:45,689 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-16 00:05:45,694 - INFO - Loading user workspace microagents: []
+2025-06-16 00:05:45,694 - WARNING - No search engine API key found, skipping search engine
+2025-06-16 00:05:45,694 - INFO - Added microagent stdio server: fetch
+2025-06-16 00:05:48,218 - INFO - [runtime bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Updated MCP config: []
+2025-06-16 00:05:48,219 - INFO - Initializing MCP agent for url='http://localhost:32157/sse' api_key='******' with SSE connection...
+2025-06-16 00:05:48,247 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:05:48,247 - INFO - Connected to MCP server url='http://localhost:32157/sse' api_key='******' via SSE
+2025-06-16 00:05:48,248 - INFO - Disconnected from MCP server
+2025-06-16 00:05:48,248 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-16 00:05:48,248 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-16 00:05:48,248 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-16 00:05:48,249 - INFO - [Agent Controller bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] AgentController bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec - created new state. start_id: 0
+2025-06-16 00:05:48,251 - INFO - [Agent Controller bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-16 00:07:55,573 - INFO - [Agent Controller bdeeeb96-910a-47b0-9a88-de371b799776-7fd4d0477c46edec] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-16 00:07:56,480 - INFO - ------------------------------
+2025-06-16 00:07:56,480 - INFO - BEGIN Runtime Completion Fn
+2025-06-16 00:07:56,480 - INFO - ------------------------------
+2025-06-16 00:07:56,480 - INFO - ------------------------------
+2025-06-16 00:07:56,480 - INFO - END Runtime Completion Fn
+2025-06-16 00:07:56,480 - INFO - ------------------------------
+2025-06-16 00:07:56,484 - INFO - Got evaluation result for repo 66:
+--------
+{}
+--------
+2025-06-16 00:08:02,115 - INFO - Logging LLM completions for instance 78 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/78

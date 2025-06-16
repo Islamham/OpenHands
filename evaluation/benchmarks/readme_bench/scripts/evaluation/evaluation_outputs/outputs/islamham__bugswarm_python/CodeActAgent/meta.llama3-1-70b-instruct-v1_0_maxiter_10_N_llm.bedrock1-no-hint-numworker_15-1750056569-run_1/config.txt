@@ -1,0 +1,7 @@
+15 workers
+10 iterations
+1 run
+timeout seconds 5*60
+max retries 1
+
+poetry fixed

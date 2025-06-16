@@ -1,0 +1,81 @@
+2025-06-15 23:53:43,464 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:53:43,652 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:53:44,346 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Container started: openhands-runtime-18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0. VSCode URL: None
+2025-06-15 23:53:44,347 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Waiting for client to become ready at http://localhost:35002...
+2025-06-15 23:54:18,629 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Runtime is ready.
+2025-06-15 23:54:19,462 - INFO - ------------------------------
+2025-06-15 23:54:19,463 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 23:54:19,463 - INFO - ------------------------------
+2025-06-15 23:54:19,465 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/paramiko/paramiko.git
+2025-06-15 23:54:21,617 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "80abb4441e7a",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'paramiko'...
+remote: Enumerating objects: 21195, done.
+remote: Total 21195 (delta 0), reused 0 (delta 0), pack-reused 21195 (from 1)
+Receiving objects: 100% (21195/21195), 5.99 MiB | 9.45 MiB/s, done.
+Resolving deltas: 100% (15931/15931), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:54:21,618 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd paramiko
+2025-06-15 23:54:22,260 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "80abb4441e7a",
+  "working_dir": "/workspace/paramiko",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/paramiko]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:54:22,260 - INFO - ------------------------------
+2025-06-15 23:54:22,260 - INFO - END Runtime Initialization Fn
+2025-06-15 23:54:22,260 - INFO - ------------------------------
+2025-06-15 23:54:22,303 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 23:54:22,312 - INFO - Loading user workspace microagents: []
+2025-06-15 23:54:22,312 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 23:54:22,313 - INFO - Added microagent stdio server: fetch
+2025-06-15 23:54:24,899 - INFO - [runtime 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Updated MCP config: []
+2025-06-15 23:54:24,901 - INFO - Initializing MCP agent for url='http://localhost:35002/sse' api_key='******' with SSE connection...
+2025-06-15 23:54:24,941 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 23:54:24,941 - INFO - Connected to MCP server url='http://localhost:35002/sse' api_key='******' via SSE
+2025-06-15 23:54:24,942 - INFO - Disconnected from MCP server
+2025-06-15 23:54:24,942 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 23:54:24,942 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 23:54:24,943 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 23:54:24,943 - INFO - [Agent Controller 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] AgentController 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0 - created new state. start_id: 0
+2025-06-15 23:54:24,950 - INFO - [Agent Controller 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 23:57:04,580 - INFO - [Agent Controller 18972e9b-5f59-4c60-9906-562d55077aee-394e73499bbdd3f0] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-15 23:57:05,130 - INFO - ------------------------------
+2025-06-15 23:57:05,130 - INFO - BEGIN Runtime Completion Fn
+2025-06-15 23:57:05,130 - INFO - ------------------------------
+2025-06-15 23:57:05,130 - INFO - ------------------------------
+2025-06-15 23:57:05,130 - INFO - END Runtime Completion Fn
+2025-06-15 23:57:05,130 - INFO - ------------------------------
+2025-06-15 23:57:05,131 - INFO - Got evaluation result for repo 19:
+--------
+{}
+--------
+2025-06-15 23:57:10,114 - INFO - Logging LLM completions for instance 33 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/33

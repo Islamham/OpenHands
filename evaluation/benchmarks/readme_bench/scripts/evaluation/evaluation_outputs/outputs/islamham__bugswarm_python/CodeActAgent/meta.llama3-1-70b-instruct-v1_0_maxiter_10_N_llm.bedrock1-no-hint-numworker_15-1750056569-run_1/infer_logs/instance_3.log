@@ -1,0 +1,298 @@
+2025-06-15 23:49:43,590 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:49:43,718 - INFO - [runtime b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:49:45,840 - INFO - [runtime b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106] Container started: openhands-runtime-b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106. VSCode URL: None
+2025-06-15 23:49:45,840 - INFO - [runtime b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106] Waiting for client to become ready at http://localhost:39430...
+2025-06-15 23:51:11,343 - INFO - [runtime b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106] Runtime is ready.
+2025-06-15 23:51:12,680 - INFO - ------------------------------
+2025-06-15 23:51:12,680 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 23:51:12,680 - INFO - ------------------------------
+2025-06-15 23:51:12,693 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/pydanny/cookiecutter-django.git
+2025-06-15 23:51:15,384 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "6cfd8c73d0b1",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'cookiecutter-django'...
+remote: Enumerating objects: 39834, done.
+remote: Counting objects: 100% (442/442), done.
+remote: Compressing objects: 100% (239/239), done.
+remote: Total 39834 (delta 377), reused 206 (delta 203), pack-reused 39392 (from 3)
+Receiving objects: 100% (39834/39834), 9.85 MiB | 15.58 MiB/s, done.
+Resolving deltas: 100% (25175/25175), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:51:15,386 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd cookiecutter-django
+2025-06-15 23:51:15,555 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "6cfd8c73d0b1",
+  "working_dir": "/workspace/cookiecutter-django",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/cookiecutter-django]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:51:15,555 - INFO - ------------------------------
+2025-06-15 23:51:15,555 - INFO - END Runtime Initialization Fn
+2025-06-15 23:51:15,555 - INFO - ------------------------------
+2025-06-15 23:51:15,851 - INFO - [runtime b18c52cf-f674-4e2c-a87c-9bf6fbab2c30-11fc600cf419e106] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 23:51:15,876 - INFO - Loading user workspace microagents: []
+2025-06-15 23:51:15,877 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 23:51:15,879 - INFO - Added microagent stdio server: fetch
+2025-06-15 23:51:33,166 - ERROR - ----------
+Error in instance [3]: timed out. Stacktrace:
+Traceback (most recent call last):
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 126, in read
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 259, in process_instance
+    state: State | None = asyncio.run(
+                          ^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/core/main.py", line 147, in run_controller
+    await add_mcp_tools_to_agent(agent, runtime, memory, config)
+  File "/Users/hamza/OpenHands/openhands/mcp/utils.py", line 194, in add_mcp_tools_to_agent
+    updated_mcp_config = runtime.get_mcp_config(extra_stdio_servers)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 397, in get_mcp_config
+    response = self._send_action_server_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 31, in request
+    return CLIENT.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 249, in handle_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout: timed out
+
+----------[The above error occurred. Retrying... (attempt 1 of 1)]----------
+
+2025-06-15 23:51:38,173 - INFO - Logging LLM completions for instance 3 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/3
+2025-06-15 23:51:38,264 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:51:38,299 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 23:51:39,491 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Container started: openhands-runtime-1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e. VSCode URL: None
+2025-06-15 23:51:39,492 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Waiting for client to become ready at http://localhost:38059...
+2025-06-15 23:52:13,720 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Runtime is ready.
+2025-06-15 23:52:15,045 - INFO - ------------------------------
+2025-06-15 23:52:15,045 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 23:52:15,045 - INFO - ------------------------------
+2025-06-15 23:52:15,048 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/pydanny/cookiecutter-django.git
+2025-06-15 23:52:17,687 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2560d94db8f3",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'cookiecutter-django'...
+remote: Enumerating objects: 39834, done.
+remote: Counting objects: 100% (447/447), done.
+remote: Compressing objects: 100% (242/242), done.
+remote: Total 39834 (delta 377), reused 208 (delta 205), pack-reused 39387 (from 3)
+Receiving objects: 100% (39834/39834), 9.85 MiB | 12.63 MiB/s, done.
+Resolving deltas: 100% (25175/25175), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:52:17,688 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd cookiecutter-django
+2025-06-15 23:52:17,851 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2560d94db8f3",
+  "working_dir": "/workspace/cookiecutter-django",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/cookiecutter-django]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 23:52:17,852 - INFO - ------------------------------
+2025-06-15 23:52:17,852 - INFO - END Runtime Initialization Fn
+2025-06-15 23:52:17,852 - INFO - ------------------------------
+2025-06-15 23:52:17,894 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 23:52:17,904 - INFO - Loading user workspace microagents: []
+2025-06-15 23:52:17,905 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 23:52:17,905 - INFO - Added microagent stdio server: fetch
+2025-06-15 23:52:21,182 - INFO - [runtime 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Updated MCP config: []
+2025-06-15 23:52:21,183 - INFO - Initializing MCP agent for url='http://localhost:38059/sse' api_key='******' with SSE connection...
+2025-06-15 23:52:21,326 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 23:52:21,326 - INFO - Connected to MCP server url='http://localhost:38059/sse' api_key='******' via SSE
+2025-06-15 23:52:21,327 - INFO - Disconnected from MCP server
+2025-06-15 23:52:21,327 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 23:52:21,328 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 23:52:21,329 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 23:52:21,330 - INFO - [Agent Controller 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] AgentController 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e - created new state. start_id: 0
+2025-06-15 23:52:21,339 - INFO - [Agent Controller 1239e4ff-6c08-42f0-9d29-5c6e48d3869e-6de49b1f79af794e] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 23:56:42,927 - ERROR - Function timed out after 300 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 259, in process_instance
+    state: State | None = asyncio.run(
+                          ^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 645, in run_forever
+    self._run_once()
+  File "/Users/hamza/miniforge3/lib/python3.12/asyncio/base_events.py", line 1961, in _run_once
+    event_list = self._selector.select(timeout)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/selectors.py", line 566, in select
+    kev_list = self._selector.control(None, max_ev, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 300 seconds
+2025-06-15 23:56:42,968 - INFO - Logging LLM completions for instance 31 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/31

@@ -1,0 +1,142 @@
+2025-06-16 00:08:02,693 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:08:02,787 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-16 00:08:04,077 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Container started: openhands-runtime-2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40. VSCode URL: None
+2025-06-16 00:08:04,077 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Waiting for client to become ready at http://localhost:34494...
+2025-06-16 00:08:42,700 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Runtime is ready.
+2025-06-16 00:08:44,054 - INFO - ------------------------------
+2025-06-16 00:08:44,055 - INFO - BEGIN Runtime Initialization Fn
+2025-06-16 00:08:44,055 - INFO - ------------------------------
+2025-06-16 00:08:44,056 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/fundakol/pytest-jira-xray.git
+2025-06-16 00:08:45,189 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9e27b78f5afc",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'pytest-jira-xray'...
+remote: Enumerating objects: 1230, done.
+remote: Counting objects: 100% (397/397), done.
+remote: Compressing objects: 100% (129/129), done.
+remote: Total 1230 (delta 279), reused 273 (delta 268), pack-reused 833 (from 2)
+Receiving objects: 100% (1230/1230), 232.03 KiB | 1.48 MiB/s, done.
+Resolving deltas: 100% (719/719), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:08:45,190 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd pytest-jira-xray
+2025-06-16 00:08:45,810 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9e27b78f5afc",
+  "working_dir": "/workspace/pytest-jira-xray",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/pytest-jira-xray]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-16 00:08:45,810 - INFO - ------------------------------
+2025-06-16 00:08:45,811 - INFO - END Runtime Initialization Fn
+2025-06-16 00:08:45,811 - INFO - ------------------------------
+2025-06-16 00:08:45,837 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-16 00:08:45,843 - INFO - Loading user workspace microagents: []
+2025-06-16 00:08:45,843 - WARNING - No search engine API key found, skipping search engine
+2025-06-16 00:08:45,843 - INFO - Added microagent stdio server: fetch
+2025-06-16 00:08:49,793 - INFO - [runtime 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Updated MCP config: []
+2025-06-16 00:08:49,795 - INFO - Initializing MCP agent for url='http://localhost:34494/sse' api_key='******' with SSE connection...
+2025-06-16 00:08:49,849 - INFO - Connected to server with tools: ['fetch']
+2025-06-16 00:08:49,849 - INFO - Connected to MCP server url='http://localhost:34494/sse' api_key='******' via SSE
+2025-06-16 00:08:49,850 - INFO - Disconnected from MCP server
+2025-06-16 00:08:49,850 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-16 00:08:49,850 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-16 00:08:49,850 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-16 00:08:49,851 - INFO - [Agent Controller 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] AgentController 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40 - created new state. start_id: 0
+2025-06-16 00:08:49,859 - INFO - [Agent Controller 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-16 00:12:58,915 - INFO - [Agent Controller 2f4694e5-3e26-4cf8-8124-e5d4b4339ea5-75255ca32d5f5c40] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-16 00:12:59,288 - INFO - ------------------------------
+2025-06-16 00:12:59,288 - INFO - BEGIN Runtime Completion Fn
+2025-06-16 00:12:59,288 - INFO - ------------------------------
+2025-06-16 00:12:59,288 - INFO - ------------------------------
+2025-06-16 00:12:59,288 - INFO - END Runtime Completion Fn
+2025-06-16 00:12:59,288 - INFO - ------------------------------
+2025-06-16 00:12:59,293 - INFO - Got evaluation result for repo 78:
+--------
+{}
+--------
+2025-06-16 00:13:02,133 - ERROR - Function timed out after 300 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 285, in process_instance
+    runtime.close()
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/docker_runtime.py", line 461, in close
+    stop_all_containers(close_prefix)
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/docker/containers.py", line 7, in stop_all_containers
+    containers = docker_client.containers.list(all=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/models/containers.py", line 1009, in list
+    resp = self.client.api.containers(all=all, before=before,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/container.py", line 212, in containers
+    res = self._result(self._get(u, params=params), True)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/utils/decorators.py", line 44, in inner
+    return f(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/docker/api/client.py", line 246, in _get
+    return self.get(url, **self._set_request_timeout(kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 602, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 1430, in getresponse
+    response.begin()
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/socket.py", line 720, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 300 seconds
+2025-06-16 00:13:02,144 - INFO - Logging LLM completions for instance 101 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_python/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_10_N_llm.bedrock1-no-hint-numworker_15-1750056569-run_1/llm_completions/101
