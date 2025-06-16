@@ -1,0 +1,123 @@
+2025-06-15 18:54:49,827 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 18:54:49,877 - INFO - [runtime 3a609021-e0f7-4eb1-aa3c-55c415a3d2a4-3bb8dc65f2c2f332] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 18:54:50,251 - INFO - [runtime 3a609021-e0f7-4eb1-aa3c-55c415a3d2a4-3bb8dc65f2c2f332] Container started: openhands-runtime-3a609021-e0f7-4eb1-aa3c-55c415a3d2a4-3bb8dc65f2c2f332. VSCode URL: None
+2025-06-15 18:54:50,251 - INFO - [runtime 3a609021-e0f7-4eb1-aa3c-55c415a3d2a4-3bb8dc65f2c2f332] Waiting for client to become ready at http://localhost:30549...
+2025-06-15 18:55:10,375 - INFO - [runtime 3a609021-e0f7-4eb1-aa3c-55c415a3d2a4-3bb8dc65f2c2f332] Runtime is ready.
+2025-06-15 18:55:11,679 - INFO - ------------------------------
+2025-06-15 18:55:11,679 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 18:55:11,679 - INFO - ------------------------------
+2025-06-15 18:55:11,679 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/JohnSnowLabs/spark-nlp.git
+2025-06-15 19:04:54,883 - ERROR - Function timed out after 600 seconds
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 248, in process_instance
+    initialize_runtime(runtime, instance)
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 164, in initialize_runtime
+    obs = runtime.run_action(action)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/base.py", line 778, in run_action
+    observation = getattr(self, action_type)(action)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 334, in run
+    return self.send_action_for_execution(action)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 316, in send_action_for_execution
+    response = self._send_action_server_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/impl/action_execution/action_execution_client.py", line 125, in _send_action_server_request
+    return send_request(self.session, method, url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 338, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 477, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 378, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 400, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/miniforge3/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/tenacity/__init__.py", line 480, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/runtime/utils/request.py", line 44, in send_request
+    response = session.request(method, url, timeout=timeout, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/openhands/utils/http_session.py", line 31, in request
+    return CLIENT.request(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 914, in send
+    response = self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpx/_transports/default.py", line 250, in handle_request
+    resp = self._pool.handle_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 256, in handle_request
+    raise exc from None
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection_pool.py", line 236, in handle_request
+    response = connection.handle_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/connection.py", line 103, in handle_request
+    return self._connection.handle_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 136, in handle_request
+    raise exc
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 106, in handle_request
+    ) = self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 177, in _receive_response_headers
+    event = self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_sync/http11.py", line 217, in _receive_event
+    data = self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/Library/Caches/pypoetry/virtualenvs/openhands-ai-ATcgL5TR-py3.12/lib/python3.12/site-packages/httpcore/_backends/sync.py", line 128, in read
+    return self._sock.recv(max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 91, in timeout_handler
+    raise EvalTimeoutException(f'Function timed out after {seconds} seconds')
+evaluation.utils.shared.EvalTimeoutException: Function timed out after 600 seconds
+2025-06-15 19:04:54,906 - INFO - Logging LLM completions for instance 33 to evaluation/evaluation_outputs/outputs/islamham__swe_bench/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750038438-run_1/llm_completions/33

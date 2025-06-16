@@ -34,7 +34,7 @@ fi
 
 
 if [ -z "$DATASET" ]; then
-  DATASET="islamham/bugswarm_maven_lite"
+  DATASET="islamham/swe_bench"
   echo "DATASET not specified, use default $DATASET"
 fi
 

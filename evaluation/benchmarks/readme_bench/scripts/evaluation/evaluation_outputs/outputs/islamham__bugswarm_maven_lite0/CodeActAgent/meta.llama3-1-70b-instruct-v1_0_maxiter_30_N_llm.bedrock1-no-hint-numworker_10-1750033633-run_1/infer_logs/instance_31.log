@@ -1,0 +1,83 @@
+2025-06-15 18:00:28,307 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 18:00:28,392 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 18:00:28,749 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Container started: openhands-runtime-7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5. VSCode URL: None
+2025-06-15 18:00:28,749 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Waiting for client to become ready at http://localhost:36748...
+2025-06-15 18:00:50,875 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Runtime is ready.
+2025-06-15 18:00:52,168 - INFO - ------------------------------
+2025-06-15 18:00:52,169 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 18:00:52,169 - INFO - ------------------------------
+2025-06-15 18:00:52,170 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/SynBioDex/libSBOLj.git
+2025-06-15 18:00:55,300 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "49d270d52cbd",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'libSBOLj'...
+remote: Enumerating objects: 32334, done.
+remote: Counting objects: 100% (46/46), done.
+remote: Compressing objects: 100% (22/22), done.
+remote: Total 32334 (delta 31), reused 31 (delta 22), pack-reused 32288 (from 2)
+Receiving objects: 100% (32334/32334), 49.67 MiB | 25.02 MiB/s, done.
+Resolving deltas: 100% (18341/18341), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 18:00:55,301 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd libSBOLj
+2025-06-15 18:00:55,919 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "49d270d52cbd",
+  "working_dir": "/workspace/libSBOLj",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/libSBOLj]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 18:00:55,919 - INFO - ------------------------------
+2025-06-15 18:00:55,920 - INFO - END Runtime Initialization Fn
+2025-06-15 18:00:55,920 - INFO - ------------------------------
+2025-06-15 18:00:55,957 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 18:00:55,961 - INFO - Loading user workspace microagents: []
+2025-06-15 18:00:55,961 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 18:00:55,961 - INFO - Added microagent stdio server: fetch
+2025-06-15 18:00:58,106 - INFO - [runtime 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Updated MCP config: []
+2025-06-15 18:00:58,107 - INFO - Initializing MCP agent for url='http://localhost:36748/sse' api_key='******' with SSE connection...
+2025-06-15 18:00:58,134 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 18:00:58,134 - INFO - Connected to MCP server url='http://localhost:36748/sse' api_key='******' via SSE
+2025-06-15 18:00:58,135 - INFO - Disconnected from MCP server
+2025-06-15 18:00:58,135 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 18:00:58,135 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 18:00:58,136 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 18:00:58,137 - INFO - [Agent Controller 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] AgentController 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5 - created new state. start_id: 0
+2025-06-15 18:00:58,140 - INFO - [Agent Controller 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 18:07:08,361 - INFO - [Agent Controller 7332657e-9850-4704-9711-c8f6b8fe9552-63f8a98f3d5057f5] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-15 18:07:08,540 - INFO - ------------------------------
+2025-06-15 18:07:08,540 - INFO - BEGIN Runtime Completion Fn
+2025-06-15 18:07:08,540 - INFO - ------------------------------
+2025-06-15 18:07:08,540 - INFO - ------------------------------
+2025-06-15 18:07:08,540 - INFO - END Runtime Completion Fn
+2025-06-15 18:07:08,540 - INFO - ------------------------------
+2025-06-15 18:07:08,540 - INFO - Got evaluation result for repo 31:
+--------
+{}
+--------
+2025-06-15 18:07:10,148 - INFO - Logging LLM completions for instance 35 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite0/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_30_N_llm.bedrock1-no-hint-numworker_10-1750033633-run_1/llm_completions/35

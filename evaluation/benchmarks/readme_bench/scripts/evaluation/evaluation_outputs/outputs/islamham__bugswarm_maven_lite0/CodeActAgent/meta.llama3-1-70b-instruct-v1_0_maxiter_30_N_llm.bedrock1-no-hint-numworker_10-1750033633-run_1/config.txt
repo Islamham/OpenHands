@@ -1,0 +1,5 @@
+10 workers
+30 iterations
+1 run
+timeout seconds 20*60
+max retries 1

@@ -1,0 +1,86 @@
+2025-06-15 13:01:48,403 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:01:48,431 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:01:48,928 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Container started: openhands-runtime-099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a. VSCode URL: None
+2025-06-15 13:01:48,929 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Waiting for client to become ready at http://localhost:30426...
+2025-06-15 13:02:15,151 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Runtime is ready.
+2025-06-15 13:02:16,506 - INFO - ------------------------------
+2025-06-15 13:02:16,507 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 13:02:16,507 - INFO - ------------------------------
+2025-06-15 13:02:16,507 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/naver/fixture-monkey.git
+2025-06-15 13:02:19,645 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "4d8539ffbfb7",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'fixture-monkey'...
+remote: Enumerating objects: 61219, done.
+remote: Counting objects: 100% (318/318), done.
+remote: Compressing objects: 100% (186/186), done.
+remote: Total 61219 (delta 123), reused 166 (delta 63), pack-reused 60901 (from 2)
+Receiving objects: 100% (61219/61219), 38.88 MiB | 24.84 MiB/s, done.
+Resolving deltas: 100% (29415/29415), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:02:19,646 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd fixture-monkey
+2025-06-15 13:02:20,262 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "4d8539ffbfb7",
+  "working_dir": "/workspace/fixture-monkey",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/fixture-monkey]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:02:20,263 - INFO - ------------------------------
+2025-06-15 13:02:20,263 - INFO - END Runtime Initialization Fn
+2025-06-15 13:02:20,264 - INFO - ------------------------------
+2025-06-15 13:02:20,279 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 13:02:20,283 - INFO - Loading user workspace microagents: []
+2025-06-15 13:02:20,283 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 13:02:20,283 - INFO - Added microagent stdio server: fetch
+2025-06-15 13:02:23,322 - INFO - [runtime 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Updated MCP config: []
+2025-06-15 13:02:23,322 - INFO - Initializing MCP agent for url='http://localhost:30426/sse' api_key='******' with SSE connection...
+2025-06-15 13:02:23,348 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 13:02:23,348 - INFO - Connected to MCP server url='http://localhost:30426/sse' api_key='******' via SSE
+2025-06-15 13:02:23,349 - INFO - Disconnected from MCP server
+2025-06-15 13:02:23,349 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 13:02:23,349 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 13:02:23,349 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 13:02:23,349 - INFO - [Agent Controller 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] AgentController 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a - created new state. start_id: 0
+2025-06-15 13:02:23,352 - INFO - [Agent Controller 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 13:17:56,873 - ERROR - RuntimeError: Agent reached maximum iteration in headless mode. Current iteration: 20, max iteration: 20
+2025-06-15 13:17:56,875 - INFO - [Agent Controller 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-15 13:17:56,877 - WARNING - Stopping agent due to traffic control
+2025-06-15 13:17:56,877 - INFO - [Agent Controller 099c70bd-621b-4422-bacf-ca18c7dfbe5f-7beee4122577b79a] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+2025-06-15 13:17:56,986 - INFO - ------------------------------
+2025-06-15 13:17:56,986 - INFO - BEGIN Runtime Completion Fn
+2025-06-15 13:17:56,986 - INFO - ------------------------------
+2025-06-15 13:17:56,986 - INFO - ------------------------------
+2025-06-15 13:17:56,986 - INFO - END Runtime Completion Fn
+2025-06-15 13:17:56,986 - INFO - ------------------------------
+2025-06-15 13:17:56,990 - INFO - Got evaluation result for repo 19:
+--------
+{}
+--------
+2025-06-15 13:17:59,473 - INFO - Logging LLM completions for instance 34 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_gradle/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750016757-run_1/llm_completions/34

@@ -1,0 +1,83 @@
+2025-06-15 13:07:18,467 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:07:18,499 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:07:18,832 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Container started: openhands-runtime-1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2. VSCode URL: None
+2025-06-15 13:07:18,833 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Waiting for client to become ready at http://localhost:37474...
+2025-06-15 13:07:39,000 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Runtime is ready.
+2025-06-15 13:07:40,326 - INFO - ------------------------------
+2025-06-15 13:07:40,327 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 13:07:40,327 - INFO - ------------------------------
+2025-06-15 13:07:40,327 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/dita-ot/dita-ot.git
+2025-06-15 13:07:47,523 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c9031111a005",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'dita-ot'...
+remote: Enumerating objects: 112951, done.
+remote: Counting objects: 100% (2655/2655), done.
+remote: Compressing objects: 100% (902/902), done.
+remote: Total 112951 (delta 1994), reused 1783 (delta 1739), pack-reused 110296 (from 4)
+Receiving objects: 100% (112951/112951), 101.95 MiB | 20.72 MiB/s, done.
+Resolving deltas: 100% (70418/70418), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:07:47,525 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd dita-ot
+2025-06-15 13:07:48,144 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "c9031111a005",
+  "working_dir": "/workspace/dita-ot",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/dita-ot]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:07:48,145 - INFO - ------------------------------
+2025-06-15 13:07:48,145 - INFO - END Runtime Initialization Fn
+2025-06-15 13:07:48,145 - INFO - ------------------------------
+2025-06-15 13:07:48,153 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 13:07:48,157 - INFO - Loading user workspace microagents: []
+2025-06-15 13:07:48,157 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 13:07:48,157 - INFO - Added microagent stdio server: fetch
+2025-06-15 13:07:50,241 - INFO - [runtime 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Updated MCP config: []
+2025-06-15 13:07:50,242 - INFO - Initializing MCP agent for url='http://localhost:37474/sse' api_key='******' with SSE connection...
+2025-06-15 13:07:50,264 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 13:07:50,264 - INFO - Connected to MCP server url='http://localhost:37474/sse' api_key='******' via SSE
+2025-06-15 13:07:50,264 - INFO - Disconnected from MCP server
+2025-06-15 13:07:50,264 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 13:07:50,265 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 13:07:50,265 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 13:07:50,265 - INFO - [Agent Controller 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] AgentController 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2 - created new state. start_id: 0
+2025-06-15 13:07:50,268 - INFO - [Agent Controller 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 13:20:23,872 - INFO - [Agent Controller 1a71d852-a4bc-461e-b4dc-1164974d263d-c0cc8801ef144aa2] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-15 13:20:24,561 - INFO - ------------------------------
+2025-06-15 13:20:24,562 - INFO - BEGIN Runtime Completion Fn
+2025-06-15 13:20:24,562 - INFO - ------------------------------
+2025-06-15 13:20:24,562 - INFO - ------------------------------
+2025-06-15 13:20:24,562 - INFO - END Runtime Completion Fn
+2025-06-15 13:20:24,562 - INFO - ------------------------------
+2025-06-15 13:20:24,566 - INFO - Got evaluation result for repo 25:
+--------
+{}
+--------
+2025-06-15 13:20:27,699 - INFO - Logging LLM completions for instance 35 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_gradle/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750016757-run_1/llm_completions/35

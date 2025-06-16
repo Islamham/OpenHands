@@ -1,0 +1,88 @@
+2025-06-15 13:01:34,420 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:01:34,457 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-15 13:01:34,876 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Container started: openhands-runtime-7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079. VSCode URL: None
+2025-06-15 13:01:34,876 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Waiting for client to become ready at http://localhost:30189...
+2025-06-15 13:02:03,047 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Runtime is ready.
+2025-06-15 13:02:04,367 - INFO - ------------------------------
+2025-06-15 13:02:04,367 - INFO - BEGIN Runtime Initialization Fn
+2025-06-15 13:02:04,368 - INFO - ------------------------------
+2025-06-15 13:02:04,369 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/Together-Java/TJ-Bot.git
+2025-06-15 13:02:05,991 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "73deb6410a24",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'TJ-Bot'...
+remote: Enumerating objects: 12337, done.
+remote: Counting objects: 100% (87/87), done.
+remote: Compressing objects: 100% (78/78), done.
+remote: Total 12337 (delta 28), reused 11 (delta 0), pack-reused 12250 (from 1)
+Receiving objects: 100% (12337/12337), 4.62 MiB | 9.49 MiB/s, done.
+Resolving deltas: 100% (5842/5842), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:02:05,991 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd TJ-Bot
+2025-06-15 13:02:06,607 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "73deb6410a24",
+  "working_dir": "/workspace/TJ-Bot",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/TJ-Bot]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-15 13:02:06,607 - INFO - ------------------------------
+2025-06-15 13:02:06,607 - INFO - END Runtime Initialization Fn
+2025-06-15 13:02:06,607 - INFO - ------------------------------
+2025-06-15 13:02:06,632 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-15 13:02:06,642 - INFO - Loading user workspace microagents: []
+2025-06-15 13:02:06,642 - WARNING - No search engine API key found, skipping search engine
+2025-06-15 13:02:06,643 - INFO - Added microagent stdio server: fetch
+2025-06-15 13:02:08,967 - INFO - [runtime 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Updated MCP config: []
+2025-06-15 13:02:08,968 - INFO - Initializing MCP agent for url='http://localhost:30189/sse' api_key='******' with SSE connection...
+2025-06-15 13:02:08,994 - INFO - Connected to server with tools: ['fetch']
+2025-06-15 13:02:08,994 - INFO - Connected to MCP server url='http://localhost:30189/sse' api_key='******' via SSE
+2025-06-15 13:02:08,994 - INFO - Disconnected from MCP server
+2025-06-15 13:02:08,994 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-15 13:02:08,995 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-15 13:02:08,995 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-15 13:02:08,995 - INFO - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] AgentController 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079 - created new state. start_id: 0
+2025-06-15 13:02:08,998 - INFO - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-15 13:06:59,018 - WARNING - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Pending action active for 106.43s: CmdRunAction (id=27)
+2025-06-15 13:06:59,019 - WARNING - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Pending action active for 106.43s: CmdRunAction (id=27)
+2025-06-15 13:13:33,193 - ERROR - RuntimeError: Agent reached maximum iteration in headless mode. Current iteration: 20, max iteration: 20
+2025-06-15 13:13:33,193 - INFO - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-15 13:13:33,194 - WARNING - Stopping agent due to traffic control
+2025-06-15 13:13:33,194 - INFO - [Agent Controller 7a778540-6b44-483e-b28f-cdba60bd5d62-e0fa035651cc6079] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+2025-06-15 13:13:34,175 - INFO - ------------------------------
+2025-06-15 13:13:34,176 - INFO - BEGIN Runtime Completion Fn
+2025-06-15 13:13:34,176 - INFO - ------------------------------
+2025-06-15 13:13:34,176 - INFO - ------------------------------
+2025-06-15 13:13:34,176 - INFO - END Runtime Completion Fn
+2025-06-15 13:13:34,176 - INFO - ------------------------------
+2025-06-15 13:13:34,179 - INFO - Got evaluation result for repo 18:
+--------
+{}
+--------
+2025-06-15 13:13:36,442 - INFO - Logging LLM completions for instance 29 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_gradle/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750016757-run_1/llm_completions/29
