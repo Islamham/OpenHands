@@ -374,6 +374,6 @@ if __name__ == '__main__':
         output_file,
         args.eval_num_workers,
         process_instance,
-        timeout_seconds=5*60, #for multiple workers only
+        timeout_seconds=10*60, #for multiple workers only
         max_retries=1 #+1 total
     )
