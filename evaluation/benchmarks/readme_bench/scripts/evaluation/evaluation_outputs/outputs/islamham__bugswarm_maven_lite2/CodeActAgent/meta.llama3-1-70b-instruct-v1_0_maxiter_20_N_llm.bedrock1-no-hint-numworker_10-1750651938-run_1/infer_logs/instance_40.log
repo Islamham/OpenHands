@@ -1,0 +1,85 @@
+2025-06-22 21:49:51,729 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:49:51,805 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:49:52,217 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Container started: openhands-runtime-da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee. VSCode URL: None
+2025-06-22 21:49:52,217 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Waiting for client to become ready at http://localhost:38639...
+2025-06-22 21:50:12,318 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Runtime is ready.
+2025-06-22 21:50:13,603 - INFO - ------------------------------
+2025-06-22 21:50:13,603 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:50:13,603 - INFO - ------------------------------
+2025-06-22 21:50:13,604 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/spring-projects/spring-data-jpa.git
+2025-06-22 21:50:16,253 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "060461405d06",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'spring-data-jpa'...
+remote: Enumerating objects: 76598, done.
+remote: Counting objects: 100% (3065/3065), done.
+remote: Compressing objects: 100% (548/548), done.
+remote: Total 76598 (delta 2803), reused 2568 (delta 2492), pack-reused 73533 (from 3)
+Receiving objects: 100% (76598/76598), 15.70 MiB | 19.09 MiB/s, done.
+Resolving deltas: 100% (39339/39339), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:50:16,255 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd spring-data-jpa
+2025-06-22 21:50:16,875 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "060461405d06",
+  "working_dir": "/workspace/spring-data-jpa",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/spring-data-jpa]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:50:16,876 - INFO - ------------------------------
+2025-06-22 21:50:16,876 - INFO - END Runtime Initialization Fn
+2025-06-22 21:50:16,876 - INFO - ------------------------------
+2025-06-22 21:50:16,887 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:50:16,891 - INFO - Loading user workspace microagents: []
+2025-06-22 21:50:16,891 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:50:16,891 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:50:18,753 - INFO - [runtime da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Updated MCP config: []
+2025-06-22 21:50:18,753 - INFO - Initializing MCP agent for url='http://localhost:38639/sse' api_key='******' with SSE connection...
+2025-06-22 21:50:18,782 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:50:18,782 - INFO - Connected to MCP server url='http://localhost:38639/sse' api_key='******' via SSE
+2025-06-22 21:50:18,783 - INFO - Disconnected from MCP server
+2025-06-22 21:50:18,783 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:50:18,783 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:50:18,783 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:50:18,783 - INFO - [Agent Controller da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] AgentController da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee - created new state. start_id: 0
+2025-06-22 21:50:18,786 - INFO - [Agent Controller da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 21:54:32,249 - WARNING - [Agent Controller da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Pending action active for 145.16s: CmdRunAction (id=13)
+2025-06-22 21:54:32,249 - WARNING - [Agent Controller da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Pending action active for 145.16s: CmdRunAction (id=13)
+2025-06-22 21:55:23,032 - INFO - [Agent Controller da940c11-3474-468d-9cfb-b4465d7a900a-9a11c10e4df6a0ee] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 21:55:23,313 - INFO - ------------------------------
+2025-06-22 21:55:23,313 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 21:55:23,314 - INFO - ------------------------------
+2025-06-22 21:55:23,314 - INFO - ------------------------------
+2025-06-22 21:55:23,314 - INFO - END Runtime Completion Fn
+2025-06-22 21:55:23,314 - INFO - ------------------------------
+2025-06-22 21:55:23,315 - INFO - Got evaluation result for repo 40:
+--------
+{}
+--------
+2025-06-22 21:55:25,107 - INFO - Logging LLM completions for instance 44 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/44

@@ -1,0 +1,83 @@
+2025-06-22 21:58:47,772 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:58:47,801 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:58:48,176 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Container started: openhands-runtime-976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144. VSCode URL: None
+2025-06-22 21:58:48,176 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Waiting for client to become ready at http://localhost:30074...
+2025-06-22 21:59:10,322 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Runtime is ready.
+2025-06-22 21:59:11,105 - INFO - ------------------------------
+2025-06-22 21:59:11,105 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:59:11,105 - INFO - ------------------------------
+2025-06-22 21:59:11,106 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/stleary/JSON-java.git
+2025-06-22 21:59:12,726 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2920d60060a0",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'JSON-java'...
+remote: Enumerating objects: 7890, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 7890 (delta 11), reused 6 (delta 6), pack-reused 7866 (from 2)
+Receiving objects: 100% (7890/7890), 3.11 MiB | 7.59 MiB/s, done.
+Resolving deltas: 100% (3557/3557), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:59:12,727 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd JSON-java
+2025-06-22 21:59:13,341 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "2920d60060a0",
+  "working_dir": "/workspace/JSON-java",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/JSON-java]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:59:13,342 - INFO - ------------------------------
+2025-06-22 21:59:13,342 - INFO - END Runtime Initialization Fn
+2025-06-22 21:59:13,342 - INFO - ------------------------------
+2025-06-22 21:59:13,355 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:59:13,360 - INFO - Loading user workspace microagents: []
+2025-06-22 21:59:13,360 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:59:13,360 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:59:15,532 - INFO - [runtime 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Updated MCP config: []
+2025-06-22 21:59:15,532 - INFO - Initializing MCP agent for url='http://localhost:30074/sse' api_key='******' with SSE connection...
+2025-06-22 21:59:15,565 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:59:15,565 - INFO - Connected to MCP server url='http://localhost:30074/sse' api_key='******' via SSE
+2025-06-22 21:59:15,566 - INFO - Disconnected from MCP server
+2025-06-22 21:59:15,566 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:59:15,566 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:59:15,566 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:59:15,567 - INFO - [Agent Controller 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] AgentController 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144 - created new state. start_id: 0
+2025-06-22 21:59:15,571 - INFO - [Agent Controller 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 22:04:02,160 - INFO - [Agent Controller 976c82a9-3f71-48e6-a1fd-12902a4d2634-3ace66d0777f1144] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 22:04:03,054 - INFO - ------------------------------
+2025-06-22 22:04:03,054 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 22:04:03,054 - INFO - ------------------------------
+2025-06-22 22:04:03,054 - INFO - ------------------------------
+2025-06-22 22:04:03,054 - INFO - END Runtime Completion Fn
+2025-06-22 22:04:03,055 - INFO - ------------------------------
+2025-06-22 22:04:03,055 - INFO - Got evaluation result for repo 49:
+--------
+{}
+--------
+2025-06-22 22:04:05,367 - INFO - Logging LLM completions for instance 52 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/52

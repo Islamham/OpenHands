@@ -1,0 +1,87 @@
+2025-06-22 21:25:49,543 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:25:49,576 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:25:50,128 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Container started: openhands-runtime-26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87. VSCode URL: None
+2025-06-22 21:25:50,128 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Waiting for client to become ready at http://localhost:32570...
+2025-06-22 21:26:12,300 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Runtime is ready.
+2025-06-22 21:26:13,589 - INFO - ------------------------------
+2025-06-22 21:26:13,589 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:26:13,589 - INFO - ------------------------------
+2025-06-22 21:26:13,591 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/openmrs/openmrs-module-fhir2.git
+2025-06-22 21:26:15,219 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "676a7774da75",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'openmrs-module-fhir2'...
+remote: Enumerating objects: 29751, done.
+remote: Counting objects: 100% (6341/6341), done.
+remote: Compressing objects: 100% (1079/1079), done.
+remote: Total 29751 (delta 5820), reused 5365 (delta 5188), pack-reused 23410 (from 2)
+Receiving objects: 100% (29751/29751), 6.63 MiB | 15.04 MiB/s, done.
+Resolving deltas: 100% (13389/13389), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:26:15,220 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd openmrs-module-fhir2
+2025-06-22 21:26:15,841 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "676a7774da75",
+  "working_dir": "/workspace/openmrs-module-fhir2",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/openmrs-module-fhir2]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:26:15,841 - INFO - ------------------------------
+2025-06-22 21:26:15,841 - INFO - END Runtime Initialization Fn
+2025-06-22 21:26:15,841 - INFO - ------------------------------
+2025-06-22 21:26:15,862 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:26:15,866 - INFO - Loading user workspace microagents: []
+2025-06-22 21:26:15,866 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:26:15,866 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:26:17,966 - INFO - [runtime 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Updated MCP config: []
+2025-06-22 21:26:17,967 - INFO - Initializing MCP agent for url='http://localhost:32570/sse' api_key='******' with SSE connection...
+2025-06-22 21:26:17,989 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:26:17,989 - INFO - Connected to MCP server url='http://localhost:32570/sse' api_key='******' via SSE
+2025-06-22 21:26:17,990 - INFO - Disconnected from MCP server
+2025-06-22 21:26:17,990 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:26:17,990 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:26:17,990 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:26:17,990 - INFO - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] AgentController 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87 - created new state. start_id: 0
+2025-06-22 21:26:17,993 - INFO - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 21:34:35,656 - WARNING - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Pending action active for 300.43s: CmdRunAction (id=15)
+2025-06-22 21:34:35,657 - WARNING - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Pending action active for 300.43s: CmdRunAction (id=15)
+2025-06-22 21:41:07,983 - WARNING - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Pending action active for 300.52s: CmdRunAction (id=19)
+2025-06-22 21:41:07,984 - WARNING - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Pending action active for 300.52s: CmdRunAction (id=19)
+2025-06-22 21:43:27,410 - INFO - [Agent Controller 26fe20c7-4478-437d-a7da-df315b0c611a-b609ea34451abc87] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 21:43:27,782 - INFO - ------------------------------
+2025-06-22 21:43:27,782 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 21:43:27,782 - INFO - ------------------------------
+2025-06-22 21:43:27,782 - INFO - ------------------------------
+2025-06-22 21:43:27,782 - INFO - END Runtime Completion Fn
+2025-06-22 21:43:27,782 - INFO - ------------------------------
+2025-06-22 21:43:27,787 - INFO - Got evaluation result for repo 17:
+--------
+{}
+--------
+2025-06-22 21:43:30,789 - INFO - Logging LLM completions for instance 34 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/34

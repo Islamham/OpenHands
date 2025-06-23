@@ -1,0 +1,85 @@
+2025-06-22 21:12:27,856 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:12:27,909 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:12:28,311 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Container started: openhands-runtime-9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb. VSCode URL: None
+2025-06-22 21:12:28,311 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Waiting for client to become ready at http://localhost:34494...
+2025-06-22 21:12:56,460 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Runtime is ready.
+2025-06-22 21:12:57,747 - INFO - ------------------------------
+2025-06-22 21:12:57,747 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:12:57,747 - INFO - ------------------------------
+2025-06-22 21:12:57,747 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/mybatis/mybatis-3.git
+2025-06-22 21:13:24,993 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9a2effad10d0",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'mybatis-3'...
+remote: Enumerating objects: 548050, done.
+remote: Counting objects: 100% (786/786), done.
+remote: Compressing objects: 100% (265/265), done.
+remote: Total 548050 (delta 666), reused 522 (delta 521), pack-reused 547264 (from 4)
+Receiving objects: 100% (548050/548050), 154.76 MiB | 7.03 MiB/s, done.
+Resolving deltas: 100% (473376/473376), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:13:24,995 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd mybatis-3
+2025-06-22 21:13:25,609 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9a2effad10d0",
+  "working_dir": "/workspace/mybatis-3",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/mybatis-3]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:13:25,609 - INFO - ------------------------------
+2025-06-22 21:13:25,610 - INFO - END Runtime Initialization Fn
+2025-06-22 21:13:25,610 - INFO - ------------------------------
+2025-06-22 21:13:25,624 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:13:25,627 - INFO - Loading user workspace microagents: []
+2025-06-22 21:13:25,627 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:13:25,627 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:13:29,188 - INFO - [runtime 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Updated MCP config: []
+2025-06-22 21:13:29,188 - INFO - Initializing MCP agent for url='http://localhost:34494/sse' api_key='******' with SSE connection...
+2025-06-22 21:13:29,216 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:13:29,216 - INFO - Connected to MCP server url='http://localhost:34494/sse' api_key='******' via SSE
+2025-06-22 21:13:29,217 - INFO - Disconnected from MCP server
+2025-06-22 21:13:29,217 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:13:29,217 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:13:29,217 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:13:29,217 - INFO - [Agent Controller 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] AgentController 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb - created new state. start_id: 0
+2025-06-22 21:13:29,219 - INFO - [Agent Controller 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 21:21:47,730 - WARNING - [Agent Controller 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Pending action active for 242.63s: CmdRunAction (id=19)
+2025-06-22 21:21:47,734 - WARNING - [Agent Controller 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Pending action active for 242.64s: CmdRunAction (id=19)
+2025-06-22 21:23:21,555 - INFO - [Agent Controller 9b4b8061-89d9-4933-a1d8-9aabe42dd92e-16e58ffd0da921eb] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 21:23:22,037 - INFO - ------------------------------
+2025-06-22 21:23:22,037 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 21:23:22,037 - INFO - ------------------------------
+2025-06-22 21:23:22,037 - INFO - ------------------------------
+2025-06-22 21:23:22,037 - INFO - END Runtime Completion Fn
+2025-06-22 21:23:22,037 - INFO - ------------------------------
+2025-06-22 21:23:22,044 - INFO - Got evaluation result for repo 10:
+--------
+{}
+--------
+2025-06-22 21:23:23,939 - INFO - Logging LLM completions for instance 15 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/15

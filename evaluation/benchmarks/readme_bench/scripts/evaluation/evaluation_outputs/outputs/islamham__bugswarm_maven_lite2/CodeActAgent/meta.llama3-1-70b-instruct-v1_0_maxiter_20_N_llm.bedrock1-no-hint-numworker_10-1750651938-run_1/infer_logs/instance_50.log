@@ -1,0 +1,83 @@
+2025-06-22 21:59:19,927 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:59:20,031 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:59:20,424 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Container started: openhands-runtime-f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c. VSCode URL: None
+2025-06-22 21:59:20,424 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Waiting for client to become ready at http://localhost:33420...
+2025-06-22 21:59:44,636 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Runtime is ready.
+2025-06-22 21:59:45,944 - INFO - ------------------------------
+2025-06-22 21:59:45,944 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:59:45,945 - INFO - ------------------------------
+2025-06-22 21:59:45,947 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/swagger-api/swagger-core.git
+2025-06-22 21:59:48,573 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "40fd04ef89b7",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'swagger-core'...
+remote: Enumerating objects: 98681, done.
+remote: Counting objects: 100% (875/875), done.
+remote: Compressing objects: 100% (340/340), done.
+remote: Total 98681 (delta 648), reused 600 (delta 510), pack-reused 97806 (from 4)
+Receiving objects: 100% (98681/98681), 22.28 MiB | 23.50 MiB/s, done.
+Resolving deltas: 100% (46689/46689), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:59:48,574 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd swagger-core
+2025-06-22 21:59:49,190 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "40fd04ef89b7",
+  "working_dir": "/workspace/swagger-core",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/swagger-core]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:59:49,191 - INFO - ------------------------------
+2025-06-22 21:59:49,191 - INFO - END Runtime Initialization Fn
+2025-06-22 21:59:49,192 - INFO - ------------------------------
+2025-06-22 21:59:49,219 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:59:49,224 - INFO - Loading user workspace microagents: []
+2025-06-22 21:59:49,224 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:59:49,224 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:59:51,253 - INFO - [runtime f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Updated MCP config: []
+2025-06-22 21:59:51,254 - INFO - Initializing MCP agent for url='http://localhost:33420/sse' api_key='******' with SSE connection...
+2025-06-22 21:59:51,291 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:59:51,291 - INFO - Connected to MCP server url='http://localhost:33420/sse' api_key='******' via SSE
+2025-06-22 21:59:51,292 - INFO - Disconnected from MCP server
+2025-06-22 21:59:51,292 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:59:51,292 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:59:51,292 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:59:51,293 - INFO - [Agent Controller f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] AgentController f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c - created new state. start_id: 0
+2025-06-22 21:59:51,296 - INFO - [Agent Controller f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 22:07:24,731 - INFO - [Agent Controller f61c7d98-a72c-4b82-810d-65dc5237144a-e7431c042c47687c] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 22:07:25,037 - INFO - ------------------------------
+2025-06-22 22:07:25,037 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 22:07:25,037 - INFO - ------------------------------
+2025-06-22 22:07:25,037 - INFO - ------------------------------
+2025-06-22 22:07:25,037 - INFO - END Runtime Completion Fn
+2025-06-22 22:07:25,038 - INFO - ------------------------------
+2025-06-22 22:07:25,038 - INFO - Got evaluation result for repo 50:
+--------
+{}
+--------
+2025-06-22 22:07:27,045 - INFO - Logging LLM completions for instance 54 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/54

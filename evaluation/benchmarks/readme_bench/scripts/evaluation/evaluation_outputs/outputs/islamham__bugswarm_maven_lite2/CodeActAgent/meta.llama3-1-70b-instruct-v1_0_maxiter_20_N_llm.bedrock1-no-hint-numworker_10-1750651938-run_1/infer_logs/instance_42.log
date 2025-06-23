@@ -1,0 +1,85 @@
+2025-06-22 21:50:30,786 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:50:30,824 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:50:31,216 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Container started: openhands-runtime-7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183. VSCode URL: None
+2025-06-22 21:50:31,217 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Waiting for client to become ready at http://localhost:37647...
+2025-06-22 21:50:53,415 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Runtime is ready.
+2025-06-22 21:50:54,755 - INFO - ------------------------------
+2025-06-22 21:50:54,756 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:50:54,756 - INFO - ------------------------------
+2025-06-22 21:50:54,757 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/spring-projects/spring-security-oauth.git
+2025-06-22 21:50:56,391 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "4dd0e458b529",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'spring-security-oauth'...
+remote: Enumerating objects: 42894, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 42894 (delta 0), reused 0 (delta 0), pack-reused 42893 (from 1)
+Receiving objects: 100% (42894/42894), 7.08 MiB | 9.65 MiB/s, done.
+Resolving deltas: 100% (18181/18181), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:50:56,392 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd spring-security-oauth
+2025-06-22 21:50:57,025 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "4dd0e458b529",
+  "working_dir": "/workspace/spring-security-oauth",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/spring-security-oauth]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:50:57,026 - INFO - ------------------------------
+2025-06-22 21:50:57,026 - INFO - END Runtime Initialization Fn
+2025-06-22 21:50:57,026 - INFO - ------------------------------
+2025-06-22 21:50:57,051 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:50:57,056 - INFO - Loading user workspace microagents: []
+2025-06-22 21:50:57,057 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:50:57,057 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:50:58,802 - INFO - [runtime 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Updated MCP config: []
+2025-06-22 21:50:58,803 - INFO - Initializing MCP agent for url='http://localhost:37647/sse' api_key='******' with SSE connection...
+2025-06-22 21:50:58,827 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:50:58,828 - INFO - Connected to MCP server url='http://localhost:37647/sse' api_key='******' via SSE
+2025-06-22 21:50:58,828 - INFO - Disconnected from MCP server
+2025-06-22 21:50:58,828 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:50:58,828 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:50:58,828 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:50:58,828 - INFO - [Agent Controller 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] AgentController 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183 - created new state. start_id: 0
+2025-06-22 21:50:58,830 - INFO - [Agent Controller 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 21:50:58,830 - INFO - Microagent 'security' triggered by keyword 'security'
+2025-06-22 21:54:20,363 - WARNING - [Agent Controller 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Pending action active for 123.78s: CmdRunAction (id=17)
+2025-06-22 21:54:20,364 - WARNING - [Agent Controller 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Pending action active for 123.79s: CmdRunAction (id=17)
+2025-06-22 22:04:49,894 - INFO - [Agent Controller 7e5bc5d8-1117-45b3-bc37-b45fed653765-919c803fa0113183] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 22:04:50,220 - INFO - ------------------------------
+2025-06-22 22:04:50,220 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 22:04:50,220 - INFO - ------------------------------
+2025-06-22 22:04:50,220 - INFO - ------------------------------
+2025-06-22 22:04:50,220 - INFO - END Runtime Completion Fn
+2025-06-22 22:04:50,220 - INFO - ------------------------------
+2025-06-22 22:04:50,221 - INFO - Got evaluation result for repo 42:
+--------
+{}
+--------
+2025-06-22 22:04:52,428 - INFO - Logging LLM completions for instance 53 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/53

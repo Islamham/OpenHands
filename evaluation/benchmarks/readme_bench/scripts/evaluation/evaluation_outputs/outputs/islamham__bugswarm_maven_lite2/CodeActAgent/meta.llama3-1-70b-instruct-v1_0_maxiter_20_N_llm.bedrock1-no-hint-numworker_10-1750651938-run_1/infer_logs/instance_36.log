@@ -1,0 +1,87 @@
+2025-06-22 21:46:36,557 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:46:36,650 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 21:46:37,114 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Container started: openhands-runtime-ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679. VSCode URL: None
+2025-06-22 21:46:37,114 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Waiting for client to become ready at http://localhost:36278...
+2025-06-22 21:46:59,339 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Runtime is ready.
+2025-06-22 21:47:00,641 - INFO - ------------------------------
+2025-06-22 21:47:00,641 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 21:47:00,641 - INFO - ------------------------------
+2025-06-22 21:47:00,642 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/sofastack/sofa-ark.git
+2025-06-22 21:47:05,298 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9d8082497a19",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'sofa-ark'...
+remote: Enumerating objects: 20300, done.
+remote: Counting objects: 100% (1786/1786), done.
+remote: Compressing objects: 100% (407/407), done.
+remote: Total 20300 (delta 1545), reused 1395 (delta 1350), pack-reused 18514 (from 2)
+Receiving objects: 100% (20300/20300), 61.66 MiB | 25.30 MiB/s, done.
+Resolving deltas: 100% (6965/6965), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:47:05,300 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd sofa-ark
+2025-06-22 21:47:05,922 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "9d8082497a19",
+  "working_dir": "/workspace/sofa-ark",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/sofa-ark]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 21:47:05,922 - INFO - ------------------------------
+2025-06-22 21:47:05,922 - INFO - END Runtime Initialization Fn
+2025-06-22 21:47:05,923 - INFO - ------------------------------
+2025-06-22 21:47:05,938 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 21:47:05,942 - INFO - Loading user workspace microagents: []
+2025-06-22 21:47:05,942 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 21:47:05,942 - INFO - Added microagent stdio server: fetch
+2025-06-22 21:47:07,746 - INFO - [runtime ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Updated MCP config: []
+2025-06-22 21:47:07,746 - INFO - Initializing MCP agent for url='http://localhost:36278/sse' api_key='******' with SSE connection...
+2025-06-22 21:47:07,769 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 21:47:07,769 - INFO - Connected to MCP server url='http://localhost:36278/sse' api_key='******' via SSE
+2025-06-22 21:47:07,770 - INFO - Disconnected from MCP server
+2025-06-22 21:47:07,770 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 21:47:07,770 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 21:47:07,770 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 21:47:07,770 - INFO - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] AgentController ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679 - created new state. start_id: 0
+2025-06-22 21:47:07,774 - INFO - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 21:49:24,653 - WARNING - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Pending action active for 74.12s: CmdRunAction (id=11)
+2025-06-22 21:49:24,653 - WARNING - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Pending action active for 74.12s: CmdRunAction (id=11)
+2025-06-22 21:54:39,219 - WARNING - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Pending action active for 160.19s: CmdRunAction (id=17)
+2025-06-22 21:54:39,220 - WARNING - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Pending action active for 160.19s: CmdRunAction (id=17)
+2025-06-22 21:56:12,720 - INFO - [Agent Controller ea7bb7d5-3998-4f15-9599-adeefb34fab3-b4498e366ac3f679] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 21:56:13,664 - INFO - ------------------------------
+2025-06-22 21:56:13,665 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 21:56:13,665 - INFO - ------------------------------
+2025-06-22 21:56:13,665 - INFO - ------------------------------
+2025-06-22 21:56:13,665 - INFO - END Runtime Completion Fn
+2025-06-22 21:56:13,665 - INFO - ------------------------------
+2025-06-22 21:56:13,666 - INFO - Got evaluation result for repo 36:
+--------
+{}
+--------
+2025-06-22 21:56:15,649 - INFO - Logging LLM completions for instance 45 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750651938-run_1/llm_completions/45
