@@ -237,3 +237,5 @@ evaluation/benchmarks/readme_bench/scripts/boto.py
 evaluation/benchmarks/readme_bench/scripts/boto2.py
 evaluation/benchmarks/readme_bench/scripts/liteLLM2.py
 evaluation/benchmarks/readme_bench/scripts/liteLLM.py
+evaluation/benchmarks/readme_bench/scripts/run_analysis.sh
+evaluation/benchmarks/readme_bench/run_analysis.py

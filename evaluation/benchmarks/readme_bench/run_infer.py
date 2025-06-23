@@ -52,35 +52,35 @@ def get_instruction(instance: pd.Series, metadata: EvalMetadata):
     instruction = (
 
         # Uncomment for Python projects   
-        f'''
-        Build the project using the README.md in the repo. 
-        Project Name: {repo_name}
-        Target OS: Linux4
-        Build Constraints: 
-        1. Do not run the project after the build
-        Build success criteria:
-        1. if pip is used, confirm the package is built successfully using pip show <package_name>
-        2. if poetry is used, run "eval $(poetry env activate)" and confirm using pip show <package_name>
-        Confirm the project is built successfully using one of the above criteria. 
-        If unable to meet criteria exactly as above, do not finish the task.
-        '''
-
-        # Uncomment for Java projects
         # f'''
         # Build the project using the README.md in the repo. 
         # Project Name: {repo_name}
         # Target OS: Linux4
         # Build Constraints: 
         # 1. Do not run the project after the build
-        # 2. Skip tests during the build
-        #     a. if maven is used, add "-DskipTests" flag to build command
-        #     b. if gradle is used, add "-x test" flag to build command
         # Build success criteria:
-        # 1. if maven is used, check output for "[INFO] BUILD SUCCESS"
-        # 2. if gradle is used, check output for "BUILD SUCCESSFUL"
+        # 1. if pip is used, confirm the package is built successfully using pip show <package_name>
+        # 2. if poetry is used, run "eval $(poetry env activate)" and confirm using pip show <package_name>
         # Confirm the project is built successfully using one of the above criteria. 
         # If unable to meet criteria exactly as above, do not finish the task.
         # '''
+
+        # Uncomment for Java projects
+        f'''
+        Build the project using the README.md in the repo. 
+        Project Name: {repo_name}
+        Target OS: Linux4
+        Build Constraints: 
+        1. Do not run the project after the build
+        2. Skip tests during the build
+            a. if maven is used, add "-DskipTests" flag to build command
+            b. if gradle is used, add "-x test" flag to build command
+        Build success criteria:
+        1. if maven is used, check output for "[INFO] BUILD SUCCESS"
+        2. if gradle is used, check output for "BUILD SUCCESSFUL"
+        Confirm the project is built successfully using one of the above criteria. 
+        If unable to meet criteria exactly as above, do not finish the task.
+        '''
 
         # If you are unable to build the project, please provide a detailed explanation of the issues you encountered.
     )
@@ -374,6 +374,6 @@ if __name__ == '__main__':
         output_file,
         args.eval_num_workers,
         process_instance,
-        timeout_seconds=10*60, #for multiple workers only
+        timeout_seconds=20*60, #for multiple workers only
         max_retries=1 #+1 total
     )

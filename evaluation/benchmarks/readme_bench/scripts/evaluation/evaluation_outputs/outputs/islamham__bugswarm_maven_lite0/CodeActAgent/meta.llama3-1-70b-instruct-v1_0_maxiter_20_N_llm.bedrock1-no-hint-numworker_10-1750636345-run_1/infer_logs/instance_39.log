@@ -1,0 +1,85 @@
+2025-06-22 17:31:26,563 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 17:31:26,618 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 17:31:27,603 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Container started: openhands-runtime-baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45. VSCode URL: None
+2025-06-22 17:31:27,603 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Waiting for client to become ready at http://localhost:34478...
+2025-06-22 17:32:07,957 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Runtime is ready.
+2025-06-22 17:32:09,302 - INFO - ------------------------------
+2025-06-22 17:32:09,303 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 17:32:09,303 - INFO - ------------------------------
+2025-06-22 17:32:09,304 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/alibaba/COLA.git
+2025-06-22 17:32:10,953 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "a32a4f6f871b",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'COLA'...
+remote: Enumerating objects: 8441, done.
+remote: Counting objects: 100% (1887/1887), done.
+remote: Compressing objects: 100% (551/551), done.
+remote: Total 8441 (delta 1494), reused 1386 (delta 1326), pack-reused 6554 (from 2)
+Receiving objects: 100% (8441/8441), 3.83 MiB | 8.46 MiB/s, done.
+Resolving deltas: 100% (3515/3515), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 17:32:10,955 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd COLA
+2025-06-22 17:32:11,579 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "a32a4f6f871b",
+  "working_dir": "/workspace/COLA",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/COLA]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 17:32:11,579 - INFO - ------------------------------
+2025-06-22 17:32:11,579 - INFO - END Runtime Initialization Fn
+2025-06-22 17:32:11,580 - INFO - ------------------------------
+2025-06-22 17:32:11,612 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 17:32:11,619 - INFO - Loading user workspace microagents: []
+2025-06-22 17:32:11,619 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 17:32:11,619 - INFO - Added microagent stdio server: fetch
+2025-06-22 17:32:14,526 - INFO - [runtime baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Updated MCP config: []
+2025-06-22 17:32:14,527 - INFO - Initializing MCP agent for url='http://localhost:34478/sse' api_key='******' with SSE connection...
+2025-06-22 17:32:14,579 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:32:14,579 - INFO - Connected to MCP server url='http://localhost:34478/sse' api_key='******' via SSE
+2025-06-22 17:32:14,580 - INFO - Disconnected from MCP server
+2025-06-22 17:32:14,580 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 17:32:14,581 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 17:32:14,581 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 17:32:14,582 - INFO - [Agent Controller baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] AgentController baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45 - created new state. start_id: 0
+2025-06-22 17:32:14,589 - INFO - [Agent Controller baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 17:38:59,718 - WARNING - [Agent Controller baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Pending action active for 89.94s: CmdRunAction (id=19)
+2025-06-22 17:38:59,719 - WARNING - [Agent Controller baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Pending action active for 89.94s: CmdRunAction (id=19)
+2025-06-22 17:40:34,141 - INFO - [Agent Controller baa52cdc-a5f8-4b12-9d18-d36881f46f7d-18739fa5c903ed45] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 17:40:34,945 - INFO - ------------------------------
+2025-06-22 17:40:34,946 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 17:40:34,946 - INFO - ------------------------------
+2025-06-22 17:40:34,946 - INFO - ------------------------------
+2025-06-22 17:40:34,946 - INFO - END Runtime Completion Fn
+2025-06-22 17:40:34,946 - INFO - ------------------------------
+2025-06-22 17:40:34,953 - INFO - Got evaluation result for repo 39:
+--------
+{}
+--------
+2025-06-22 17:40:41,223 - INFO - Logging LLM completions for instance 47 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite0/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750636345-run_1/llm_completions/47

@@ -1,0 +1,121 @@
+2025-06-22 17:00:58,232 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 17:00:58,279 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-22 17:00:58,833 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Container started: openhands-runtime-c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019. VSCode URL: None
+2025-06-22 17:00:58,833 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Waiting for client to become ready at http://localhost:39116...
+2025-06-22 17:01:31,164 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Runtime is ready.
+2025-06-22 17:01:32,488 - INFO - ------------------------------
+2025-06-22 17:01:32,488 - INFO - BEGIN Runtime Initialization Fn
+2025-06-22 17:01:32,488 - INFO - ------------------------------
+2025-06-22 17:01:32,489 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/JanusGraph/janusgraph.git
+2025-06-22 17:01:37,658 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "7093bea83b93",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'janusgraph'...
+remote: Enumerating objects: 137909, done.
+remote: Counting objects: 100% (709/709), done.
+remote: Compressing objects: 100% (334/334), done.
+remote: Total 137909 (delta 549), reused 377 (delta 375), pack-reused 137200 (from 4)
+Receiving objects: 100% (137909/137909), 59.59 MiB | 24.25 MiB/s, done.
+Resolving deltas: 100% (68592/68592), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 17:01:37,659 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd janusgraph
+2025-06-22 17:01:38,294 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "7093bea83b93",
+  "working_dir": "/workspace/janusgraph",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/janusgraph]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-22 17:01:38,294 - INFO - ------------------------------
+2025-06-22 17:01:38,294 - INFO - END Runtime Initialization Fn
+2025-06-22 17:01:38,294 - INFO - ------------------------------
+2025-06-22 17:01:38,329 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-22 17:01:38,340 - INFO - Loading user workspace microagents: []
+2025-06-22 17:01:38,340 - WARNING - No search engine API key found, skipping search engine
+2025-06-22 17:01:38,341 - INFO - Added microagent stdio server: fetch
+2025-06-22 17:01:41,364 - INFO - [runtime c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Updated MCP config: []
+2025-06-22 17:01:41,365 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:01:41,427 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:01:41,427 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:01:41,428 - INFO - Disconnected from MCP server
+2025-06-22 17:01:41,428 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-22 17:01:41,429 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-22 17:01:41,429 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-22 17:01:41,429 - INFO - [Agent Controller c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] AgentController c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019 - created new state. start_id: 0
+2025-06-22 17:01:41,437 - INFO - [Agent Controller c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-22 17:02:36,221 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:02:36,272 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:02:36,272 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:02:36,272 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:02:36,297 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:02:36,297 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:02:43,648 - INFO - Disconnected from MCP server
+2025-06-22 17:02:43,648 - INFO - Disconnected from MCP server
+2025-06-22 17:03:29,773 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:03:29,838 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:03:29,838 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:03:29,838 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:03:29,866 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:03:29,867 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:03:29,867 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:03:29,882 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:03:29,882 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:03:30,951 - INFO - Disconnected from MCP server
+2025-06-22 17:03:30,951 - INFO - Disconnected from MCP server
+2025-06-22 17:03:30,951 - INFO - Disconnected from MCP server
+2025-06-22 17:04:17,641 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:04:17,684 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:04:17,685 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:04:17,685 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:04:17,701 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:04:17,701 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:04:17,701 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:04:17,717 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:04:17,717 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:04:17,718 - INFO - Initializing MCP agent for url='http://localhost:39116/sse' api_key='******' with SSE connection...
+2025-06-22 17:04:17,734 - INFO - Connected to server with tools: ['fetch']
+2025-06-22 17:04:17,734 - INFO - Connected to MCP server url='http://localhost:39116/sse' api_key='******' via SSE
+2025-06-22 17:04:19,414 - INFO - Disconnected from MCP server
+2025-06-22 17:04:19,414 - INFO - Disconnected from MCP server
+2025-06-22 17:04:19,414 - INFO - Disconnected from MCP server
+2025-06-22 17:04:19,415 - INFO - Disconnected from MCP server
+2025-06-22 17:16:36,515 - WARNING - [Agent Controller c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Pending action active for 258.20s: CmdRunAction (id=31)
+2025-06-22 17:16:36,517 - WARNING - [Agent Controller c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Pending action active for 258.20s: CmdRunAction (id=31)
+2025-06-22 17:17:22,955 - INFO - [Agent Controller c46e4811-542e-4067-b921-4d950383df01-d2dfacee43780019] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-22 17:17:22,986 - INFO - ------------------------------
+2025-06-22 17:17:22,987 - INFO - BEGIN Runtime Completion Fn
+2025-06-22 17:17:22,987 - INFO - ------------------------------
+2025-06-22 17:17:22,987 - INFO - ------------------------------
+2025-06-22 17:17:22,987 - INFO - END Runtime Completion Fn
+2025-06-22 17:17:22,987 - INFO - ------------------------------
+2025-06-22 17:17:22,992 - INFO - Got evaluation result for repo 15:
+--------
+{}
+--------
+2025-06-22 17:17:26,558 - INFO - Logging LLM completions for instance 28 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite0/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1750636345-run_1/llm_completions/28
