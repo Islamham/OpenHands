@@ -1,0 +1,11 @@
+2025-06-29 12:19:42,622 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 12:19:42,667 - INFO - [runtime b9bbe15b-6d08-4a06-8708-55d33fe41b5c-da03ff5ad4f86af9] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 12:19:43,110 - INFO - [runtime b9bbe15b-6d08-4a06-8708-55d33fe41b5c-da03ff5ad4f86af9] Container started: openhands-runtime-b9bbe15b-6d08-4a06-8708-55d33fe41b5c-da03ff5ad4f86af9. VSCode URL: None
+2025-06-29 12:19:43,110 - INFO - [runtime b9bbe15b-6d08-4a06-8708-55d33fe41b5c-da03ff5ad4f86af9] Waiting for client to become ready at http://localhost:39993...
+2025-06-29 12:20:07,259 - INFO - [runtime b9bbe15b-6d08-4a06-8708-55d33fe41b5c-da03ff5ad4f86af9] Runtime is ready.
+2025-06-29 12:20:08,564 - INFO - ------------------------------
+2025-06-29 12:20:08,564 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 12:20:08,564 - INFO - ------------------------------
+2025-06-29 12:20:08,564 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/equinor/neqsim.git

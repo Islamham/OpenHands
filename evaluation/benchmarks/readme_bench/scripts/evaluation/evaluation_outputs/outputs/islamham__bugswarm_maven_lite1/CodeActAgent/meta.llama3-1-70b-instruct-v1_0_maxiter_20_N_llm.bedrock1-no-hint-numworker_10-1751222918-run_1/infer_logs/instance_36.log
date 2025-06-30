@@ -1,0 +1,4 @@
+2025-06-29 12:19:52,190 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 12:19:52,314 - INFO - [runtime 99cde2b4-4054-4500-90b1-fb3611336821-ed4ae43a48d6040e] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 12:19:52,769 - INFO - [runtime 99cde2b4-4054-4500-90b1-fb3611336821-ed4ae43a48d6040e] Container started: openhands-runtime-99cde2b4-4054-4500-90b1-fb3611336821-ed4ae43a48d6040e. VSCode URL: None
+2025-06-29 12:19:52,770 - INFO - [runtime 99cde2b4-4054-4500-90b1-fb3611336821-ed4ae43a48d6040e] Waiting for client to become ready at http://localhost:35239...
