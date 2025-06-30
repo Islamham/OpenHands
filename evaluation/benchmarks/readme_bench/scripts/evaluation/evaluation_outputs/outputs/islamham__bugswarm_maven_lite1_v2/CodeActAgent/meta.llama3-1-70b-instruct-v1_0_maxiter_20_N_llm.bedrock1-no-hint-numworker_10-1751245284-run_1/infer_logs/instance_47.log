@@ -1,0 +1,85 @@
+2025-06-29 18:46:00,500 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:46:00,538 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:46:00,916 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Container started: openhands-runtime-38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932. VSCode URL: None
+2025-06-29 18:46:00,916 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Waiting for client to become ready at http://localhost:34594...
+2025-06-29 18:46:23,033 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Runtime is ready.
+2025-06-29 18:46:23,819 - INFO - ------------------------------
+2025-06-29 18:46:23,819 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:46:23,819 - INFO - ------------------------------
+2025-06-29 18:46:23,819 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/googleapis/java-firestore.git
+2025-06-29 18:46:25,944 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "7ee0806ad9f4",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'java-firestore'...
+remote: Enumerating objects: 38920, done.
+remote: Counting objects: 100% (1013/1013), done.
+remote: Compressing objects: 100% (326/326), done.
+remote: Total 38920 (delta 938), reused 687 (delta 687), pack-reused 37907 (from 3)
+Receiving objects: 100% (38920/38920), 14.85 MiB | 22.11 MiB/s, done.
+Resolving deltas: 100% (22182/22182), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:46:25,945 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd java-firestore
+2025-06-29 18:46:26,558 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "7ee0806ad9f4",
+  "working_dir": "/workspace/java-firestore",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/java-firestore]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:46:26,558 - INFO - ------------------------------
+2025-06-29 18:46:26,558 - INFO - END Runtime Initialization Fn
+2025-06-29 18:46:26,559 - INFO - ------------------------------
+2025-06-29 18:46:26,584 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:46:26,587 - INFO - Loading user workspace microagents: []
+2025-06-29 18:46:26,587 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:46:26,587 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:46:28,677 - INFO - [runtime 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Updated MCP config: []
+2025-06-29 18:46:28,677 - INFO - Initializing MCP agent for url='http://localhost:34594/sse' api_key='******' with SSE connection...
+2025-06-29 18:46:28,708 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:46:28,708 - INFO - Connected to MCP server url='http://localhost:34594/sse' api_key='******' via SSE
+2025-06-29 18:46:28,709 - INFO - Disconnected from MCP server
+2025-06-29 18:46:28,709 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:46:28,709 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:46:28,709 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:46:28,709 - INFO - [Agent Controller 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] AgentController 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932 - created new state. start_id: 0
+2025-06-29 18:46:28,713 - INFO - [Agent Controller 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 18:48:51,428 - WARNING - [Agent Controller 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Pending action active for 79.83s: CmdRunAction (id=11)
+2025-06-29 18:48:51,430 - WARNING - [Agent Controller 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Pending action active for 79.83s: CmdRunAction (id=11)
+2025-06-29 18:49:37,041 - INFO - [Agent Controller 38300893-44fc-49c1-9398-8d6cc2fe2cf6-47fbce9b10f00932] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-29 18:49:37,928 - INFO - ------------------------------
+2025-06-29 18:49:37,928 - INFO - BEGIN Runtime Completion Fn
+2025-06-29 18:49:37,928 - INFO - ------------------------------
+2025-06-29 18:49:37,928 - INFO - ------------------------------
+2025-06-29 18:49:37,928 - INFO - END Runtime Completion Fn
+2025-06-29 18:49:37,928 - INFO - ------------------------------
+2025-06-29 18:49:37,929 - INFO - Got evaluation result for repo 47:
+--------
+{}
+--------
+2025-06-29 18:49:41,838 - INFO - Logging LLM completions for instance 52 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite1_v2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1751245284-run_1/llm_completions/52

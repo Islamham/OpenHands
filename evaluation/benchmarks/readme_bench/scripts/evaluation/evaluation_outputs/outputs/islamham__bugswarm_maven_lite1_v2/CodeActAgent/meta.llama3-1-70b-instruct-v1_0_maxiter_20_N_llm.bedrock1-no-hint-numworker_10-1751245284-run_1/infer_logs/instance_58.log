@@ -1,0 +1,85 @@
+2025-06-29 18:55:37,441 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:55:37,509 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:55:37,899 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Container started: openhands-runtime-3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01. VSCode URL: None
+2025-06-29 18:55:37,899 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Waiting for client to become ready at http://localhost:31605...
+2025-06-29 18:56:02,088 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Runtime is ready.
+2025-06-29 18:56:03,390 - INFO - ------------------------------
+2025-06-29 18:56:03,391 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:56:03,391 - INFO - ------------------------------
+2025-06-29 18:56:03,392 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/jcabi/jcabi-s3.git
+2025-06-29 18:56:04,510 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "fb6078f57469",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'jcabi-s3'...
+remote: Enumerating objects: 6895, done.
+remote: Counting objects: 100% (25/25), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 6895 (delta 19), reused 14 (delta 14), pack-reused 6870 (from 3)
+Receiving objects: 100% (6895/6895), 2.21 MiB | 5.71 MiB/s, done.
+Resolving deltas: 100% (4706/4706), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:56:04,511 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd jcabi-s3
+2025-06-29 18:56:05,136 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "fb6078f57469",
+  "working_dir": "/workspace/jcabi-s3",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/jcabi-s3]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:56:05,137 - INFO - ------------------------------
+2025-06-29 18:56:05,137 - INFO - END Runtime Initialization Fn
+2025-06-29 18:56:05,137 - INFO - ------------------------------
+2025-06-29 18:56:05,159 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:56:05,171 - INFO - Loading user workspace microagents: []
+2025-06-29 18:56:05,172 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:56:05,172 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:56:07,220 - INFO - [runtime 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Updated MCP config: []
+2025-06-29 18:56:07,221 - INFO - Initializing MCP agent for url='http://localhost:31605/sse' api_key='******' with SSE connection...
+2025-06-29 18:56:07,243 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:56:07,243 - INFO - Connected to MCP server url='http://localhost:31605/sse' api_key='******' via SSE
+2025-06-29 18:56:07,243 - INFO - Disconnected from MCP server
+2025-06-29 18:56:07,243 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:56:07,243 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:56:07,244 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:56:07,244 - INFO - [Agent Controller 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] AgentController 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01 - created new state. start_id: 0
+2025-06-29 18:56:07,247 - INFO - [Agent Controller 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 19:01:17,915 - WARNING - [Agent Controller 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Pending action active for 241.81s: CmdRunAction (id=13)
+2025-06-29 19:01:17,918 - WARNING - [Agent Controller 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Pending action active for 241.82s: CmdRunAction (id=13)
+2025-06-29 19:02:08,695 - INFO - [Agent Controller 3316d212-ea41-46c3-b963-f6fdfb7eeb33-0415c28c73144a01] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-29 19:02:09,629 - INFO - ------------------------------
+2025-06-29 19:02:09,629 - INFO - BEGIN Runtime Completion Fn
+2025-06-29 19:02:09,629 - INFO - ------------------------------
+2025-06-29 19:02:09,629 - INFO - ------------------------------
+2025-06-29 19:02:09,629 - INFO - END Runtime Completion Fn
+2025-06-29 19:02:09,629 - INFO - ------------------------------
+2025-06-29 19:02:09,633 - INFO - Got evaluation result for repo 58:
+--------
+{}
+--------
+2025-06-29 19:02:13,168 - INFO - Logging LLM completions for instance 63 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite1_v2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1751245284-run_1/llm_completions/63

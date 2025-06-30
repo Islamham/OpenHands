@@ -1,0 +1,86 @@
+2025-06-29 18:30:00,492 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:30:00,520 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:30:00,942 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Container started: openhands-runtime-8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607. VSCode URL: None
+2025-06-29 18:30:00,942 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Waiting for client to become ready at http://localhost:32416...
+2025-06-29 18:30:25,067 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Runtime is ready.
+2025-06-29 18:30:26,387 - INFO - ------------------------------
+2025-06-29 18:30:26,388 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:30:26,388 - INFO - ------------------------------
+2025-06-29 18:30:26,389 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/eclipse/jnosql.git
+2025-06-29 18:30:29,032 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "57d4d0c26204",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'jnosql'...
+remote: Enumerating objects: 112306, done.
+remote: Counting objects: 100% (6936/6936), done.
+remote: Compressing objects: 100% (2311/2311), done.
+remote: Total 112306 (delta 3607), reused 5381 (delta 3459), pack-reused 105370 (from 4)
+Receiving objects: 100% (112306/112306), 13.03 MiB | 13.16 MiB/s, done.
+Resolving deltas: 100% (51296/51296), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:30:29,033 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd jnosql
+2025-06-29 18:30:29,657 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "57d4d0c26204",
+  "working_dir": "/workspace/jnosql",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/jnosql]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:30:29,657 - INFO - ------------------------------
+2025-06-29 18:30:29,657 - INFO - END Runtime Initialization Fn
+2025-06-29 18:30:29,657 - INFO - ------------------------------
+2025-06-29 18:30:29,680 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:30:29,689 - INFO - Loading user workspace microagents: []
+2025-06-29 18:30:29,689 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:30:29,689 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:30:31,679 - INFO - [runtime 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Updated MCP config: []
+2025-06-29 18:30:31,680 - INFO - Initializing MCP agent for url='http://localhost:32416/sse' api_key='******' with SSE connection...
+2025-06-29 18:30:31,715 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:30:31,715 - INFO - Connected to MCP server url='http://localhost:32416/sse' api_key='******' via SSE
+2025-06-29 18:30:31,716 - INFO - Disconnected from MCP server
+2025-06-29 18:30:31,716 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:30:31,716 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:30:31,716 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:30:31,717 - INFO - [Agent Controller 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] AgentController 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607 - created new state. start_id: 0
+2025-06-29 18:30:31,720 - INFO - [Agent Controller 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 18:46:20,157 - ERROR - RuntimeError: Agent reached maximum iteration in headless mode. Current iteration: 20, max iteration: 20
+2025-06-29 18:46:20,160 - INFO - [Agent Controller 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.ERROR
+2025-06-29 18:46:20,161 - WARNING - Stopping agent due to traffic control
+2025-06-29 18:46:20,161 - INFO - [Agent Controller 8f69349e-b2b8-490b-8c1a-dc1051389dbb-9efd48a3744da607] Setting agent(CodeActAgent) state from AgentState.ERROR to AgentState.ERROR
+2025-06-29 18:46:20,663 - INFO - ------------------------------
+2025-06-29 18:46:20,663 - INFO - BEGIN Runtime Completion Fn
+2025-06-29 18:46:20,663 - INFO - ------------------------------
+2025-06-29 18:46:20,663 - INFO - ------------------------------
+2025-06-29 18:46:20,664 - INFO - END Runtime Completion Fn
+2025-06-29 18:46:20,664 - INFO - ------------------------------
+2025-06-29 18:46:20,670 - INFO - Got evaluation result for repo 34:
+--------
+{}
+--------
+2025-06-29 18:46:23,430 - INFO - Logging LLM completions for instance 48 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite1_v2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1751245284-run_1/llm_completions/48

@@ -1,0 +1,84 @@
+2025-06-29 18:56:21,790 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:56:21,883 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:56:22,476 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Container started: openhands-runtime-3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36. VSCode URL: None
+2025-06-29 18:56:22,476 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Waiting for client to become ready at http://localhost:37297...
+2025-06-29 18:56:54,752 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Runtime is ready.
+2025-06-29 18:56:56,065 - INFO - ------------------------------
+2025-06-29 18:56:56,065 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:56:56,065 - INFO - ------------------------------
+2025-06-29 18:56:56,066 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/jitsi/jicofo.git
+2025-06-29 18:57:00,245 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "dc2c4ab8b914",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'jicofo'...
+remote: Enumerating objects: 37770, done.
+remote: Counting objects: 100% (404/404), done.
+remote: Compressing objects: 100% (195/195), done.
+remote: Total 37770 (delta 348), reused 209 (delta 209), pack-reused 37366 (from 3)
+Receiving objects: 100% (37770/37770), 39.39 MiB | 21.81 MiB/s, done.
+Resolving deltas: 100% (21092/21092), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:57:00,247 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd jicofo
+2025-06-29 18:57:00,876 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "dc2c4ab8b914",
+  "working_dir": "/workspace/jicofo",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/jicofo]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:57:00,876 - INFO - ------------------------------
+2025-06-29 18:57:00,877 - INFO - END Runtime Initialization Fn
+2025-06-29 18:57:00,877 - INFO - ------------------------------
+2025-06-29 18:57:00,902 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:57:00,908 - INFO - Loading user workspace microagents: []
+2025-06-29 18:57:00,908 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:57:00,908 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:57:03,274 - INFO - [runtime 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Updated MCP config: []
+2025-06-29 18:57:03,274 - INFO - Initializing MCP agent for url='http://localhost:37297/sse' api_key='******' with SSE connection...
+2025-06-29 18:57:03,312 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:57:03,312 - INFO - Connected to MCP server url='http://localhost:37297/sse' api_key='******' via SSE
+2025-06-29 18:57:03,313 - INFO - Disconnected from MCP server
+2025-06-29 18:57:03,313 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:57:03,313 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:57:03,313 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:57:03,314 - INFO - [Agent Controller 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] AgentController 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36 - created new state. start_id: 0
+2025-06-29 18:57:03,317 - INFO - [Agent Controller 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 19:02:06,036 - WARNING - [Agent Controller 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Pending action active for 236.00s: CmdRunAction (id=13)
+2025-06-29 19:02:06,037 - WARNING - [Agent Controller 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Pending action active for 236.00s: CmdRunAction (id=13)
+2025-06-29 19:04:12,462 - INFO - [Agent Controller 3270ed1d-727d-46bd-ae23-416433f7a424-0e44a228a63dcb36] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-29 19:04:12,784 - INFO - ------------------------------
+2025-06-29 19:04:12,784 - INFO - BEGIN Runtime Completion Fn
+2025-06-29 19:04:12,784 - INFO - ------------------------------
+2025-06-29 19:04:12,784 - INFO - ------------------------------
+2025-06-29 19:04:12,784 - INFO - END Runtime Completion Fn
+2025-06-29 19:04:12,784 - INFO - ------------------------------
+2025-06-29 19:04:12,793 - INFO - Got evaluation result for repo 59:
+--------
+{}
+--------

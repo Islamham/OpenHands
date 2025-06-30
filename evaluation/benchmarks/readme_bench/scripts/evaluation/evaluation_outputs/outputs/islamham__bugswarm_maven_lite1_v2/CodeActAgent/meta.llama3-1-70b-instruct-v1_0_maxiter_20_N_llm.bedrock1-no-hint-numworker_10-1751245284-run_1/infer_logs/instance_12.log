@@ -1,0 +1,83 @@
+2025-06-29 18:08:35,527 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:08:35,585 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:08:36,219 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Container started: openhands-runtime-21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3. VSCode URL: None
+2025-06-29 18:08:36,219 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Waiting for client to become ready at http://localhost:36225...
+2025-06-29 18:09:14,546 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Runtime is ready.
+2025-06-29 18:09:15,853 - INFO - ------------------------------
+2025-06-29 18:09:15,853 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:09:15,854 - INFO - ------------------------------
+2025-06-29 18:09:15,854 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/asterisk-java/asterisk-java.git
+2025-06-29 18:09:19,048 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "1c5b4013ff9d",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'asterisk-java'...
+remote: Enumerating objects: 28970, done.
+remote: Counting objects: 100% (735/735), done.
+remote: Compressing objects: 100% (319/319), done.
+remote: Total 28970 (delta 595), reused 416 (delta 416), pack-reused 28235 (from 2)
+Receiving objects: 100% (28970/28970), 55.21 MiB | 28.71 MiB/s, done.
+Resolving deltas: 100% (16577/16577), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:09:19,050 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd asterisk-java
+2025-06-29 18:09:19,183 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "1c5b4013ff9d",
+  "working_dir": "/workspace/asterisk-java",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/asterisk-java]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:09:19,183 - INFO - ------------------------------
+2025-06-29 18:09:19,183 - INFO - END Runtime Initialization Fn
+2025-06-29 18:09:19,183 - INFO - ------------------------------
+2025-06-29 18:09:19,213 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:09:19,223 - INFO - Loading user workspace microagents: []
+2025-06-29 18:09:19,223 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:09:19,223 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:09:22,147 - INFO - [runtime 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Updated MCP config: []
+2025-06-29 18:09:22,148 - INFO - Initializing MCP agent for url='http://localhost:36225/sse' api_key='******' with SSE connection...
+2025-06-29 18:09:22,176 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:09:22,176 - INFO - Connected to MCP server url='http://localhost:36225/sse' api_key='******' via SSE
+2025-06-29 18:09:22,177 - INFO - Disconnected from MCP server
+2025-06-29 18:09:22,177 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:09:22,177 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:09:22,177 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:09:22,177 - INFO - [Agent Controller 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] AgentController 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3 - created new state. start_id: 0
+2025-06-29 18:09:22,180 - INFO - [Agent Controller 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 18:17:26,562 - INFO - [Agent Controller 21884087-c143-42f0-b262-8bcb7558a988-230bde8502f08ef3] Setting agent(CodeActAgent) state from AgentState.RUNNING to AgentState.FINISHED
+2025-06-29 18:17:26,664 - INFO - ------------------------------
+2025-06-29 18:17:26,664 - INFO - BEGIN Runtime Completion Fn
+2025-06-29 18:17:26,664 - INFO - ------------------------------
+2025-06-29 18:17:26,664 - INFO - ------------------------------
+2025-06-29 18:17:26,664 - INFO - END Runtime Completion Fn
+2025-06-29 18:17:26,664 - INFO - ------------------------------
+2025-06-29 18:17:26,669 - INFO - Got evaluation result for repo 12:
+--------
+{}
+--------
+2025-06-29 18:17:32,143 - INFO - Logging LLM completions for instance 24 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite1_v2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1751245284-run_1/llm_completions/24

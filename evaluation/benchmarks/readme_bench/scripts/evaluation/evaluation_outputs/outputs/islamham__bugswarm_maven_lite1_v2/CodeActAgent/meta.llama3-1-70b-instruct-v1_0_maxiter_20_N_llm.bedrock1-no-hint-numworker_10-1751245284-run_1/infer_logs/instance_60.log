@@ -1,0 +1,75 @@
+2025-06-29 18:56:56,891 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:56:56,959 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:56:57,612 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Container started: openhands-runtime-2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a. VSCode URL: None
+2025-06-29 18:56:57,612 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Waiting for client to become ready at http://localhost:39679...
+2025-06-29 18:57:25,799 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Runtime is ready.
+2025-06-29 18:57:27,086 - INFO - ------------------------------
+2025-06-29 18:57:27,086 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:57:27,087 - INFO - ------------------------------
+2025-06-29 18:57:27,087 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/joel-costigliola/assertj-core.git
+2025-06-29 18:57:31,732 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "d96144852945",
+  "working_dir": "/workspace",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'assertj-core'...
+remote: Enumerating objects: 168847, done.
+remote: Counting objects: 100% (195/195), done.
+remote: Compressing objects: 100% (104/104), done.
+remote: Total 168847 (delta 81), reused 148 (delta 56), pack-reused 168652 (from 1)
+Receiving objects: 100% (168847/168847), 49.65 MiB | 23.71 MiB/s, done.
+Resolving deltas: 100% (127028/127028), done.
+[The command completed with exit code 0.]
+[Current working directory: /workspace]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:57:31,733 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+cd assertj-core
+2025-06-29 18:57:32,351 - INFO - **CmdOutputObservation (source=None, exit code=0, metadata={
+  "exit_code": 0,
+  "pid": -1,
+  "username": "root",
+  "hostname": "d96144852945",
+  "working_dir": "/workspace/assertj-core",
+  "py_interpreter_path": "/openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python",
+  "prefix": "",
+  "suffix": "\n[The command completed with exit code 0.]"
+})**
+--BEGIN AGENT OBSERVATION--
+
+[The command completed with exit code 0.]
+[Current working directory: /workspace/assertj-core]
+[Python interpreter: /openhands/poetry/openhands-ai-5O4_aCHf-py3.12/bin/python]
+[Command finished with exit code 0]
+--END AGENT OBSERVATION--
+2025-06-29 18:57:32,351 - INFO - ------------------------------
+2025-06-29 18:57:32,352 - INFO - END Runtime Initialization Fn
+2025-06-29 18:57:32,352 - INFO - ------------------------------
+2025-06-29 18:57:32,379 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Selected repo: None, loading microagents from /workspace/.openhands/microagents (inside runtime)
+2025-06-29 18:57:32,383 - INFO - Loading user workspace microagents: []
+2025-06-29 18:57:32,383 - WARNING - No search engine API key found, skipping search engine
+2025-06-29 18:57:32,384 - INFO - Added microagent stdio server: fetch
+2025-06-29 18:57:34,445 - INFO - [runtime 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Updated MCP config: []
+2025-06-29 18:57:34,446 - INFO - Initializing MCP agent for url='http://localhost:39679/sse' api_key='******' with SSE connection...
+2025-06-29 18:57:34,473 - INFO - Connected to server with tools: ['fetch']
+2025-06-29 18:57:34,473 - INFO - Connected to MCP server url='http://localhost:39679/sse' api_key='******' via SSE
+2025-06-29 18:57:34,473 - INFO - Disconnected from MCP server
+2025-06-29 18:57:34,474 - INFO - Loaded 1 MCP tools: ['fetch']
+2025-06-29 18:57:34,474 - INFO - Setting 1 MCP tools for agent CodeActAgent: ['fetch']
+2025-06-29 18:57:34,474 - INFO - Tools updated for agent CodeActAgent, total 5: ['execute_bash', 'think', 'finish', 'str_replace_editor', 'fetch']
+2025-06-29 18:57:34,474 - INFO - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] AgentController 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a - created new state. start_id: 0
+2025-06-29 18:57:34,477 - INFO - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Setting agent(CodeActAgent) state from AgentState.LOADING to AgentState.RUNNING
+2025-06-29 19:02:46,610 - WARNING - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Pending action active for 206.84s: CmdRunAction (id=17)
+2025-06-29 19:02:46,611 - WARNING - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Pending action active for 206.84s: CmdRunAction (id=17)
+2025-06-29 19:04:35,831 - WARNING - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Pending action active for 60.15s: CmdRunAction (id=19)
+2025-06-29 19:04:35,832 - WARNING - [Agent Controller 2866802f-8552-4835-988b-65a433c72935-8330ff1c5855df5a] Pending action active for 60.15s: CmdRunAction (id=19)

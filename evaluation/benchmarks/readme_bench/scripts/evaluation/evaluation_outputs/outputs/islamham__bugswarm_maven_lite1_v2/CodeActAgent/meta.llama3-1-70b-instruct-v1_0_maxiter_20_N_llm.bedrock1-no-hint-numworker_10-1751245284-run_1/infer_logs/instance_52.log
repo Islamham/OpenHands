@@ -1,0 +1,137 @@
+2025-06-29 18:49:42,000 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:49:42,100 - INFO - [runtime 33c85770-bc2c-42a2-9bf3-c57a6513b985-312f3c00b0c60a78] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 18:49:42,948 - INFO - [runtime 33c85770-bc2c-42a2-9bf3-c57a6513b985-312f3c00b0c60a78] Container started: openhands-runtime-33c85770-bc2c-42a2-9bf3-c57a6513b985-312f3c00b0c60a78. VSCode URL: None
+2025-06-29 18:49:42,948 - INFO - [runtime 33c85770-bc2c-42a2-9bf3-c57a6513b985-312f3c00b0c60a78] Waiting for client to become ready at http://localhost:34865...
+2025-06-29 18:50:11,122 - INFO - [runtime 33c85770-bc2c-42a2-9bf3-c57a6513b985-312f3c00b0c60a78] Runtime is ready.
+2025-06-29 18:50:12,433 - INFO - ------------------------------
+2025-06-29 18:50:12,433 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 18:50:12,433 - INFO - ------------------------------
+2025-06-29 18:50:12,434 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/hashgraph/hedera-mirror-node.git
+2025-06-29 19:00:12,778 - INFO - **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--
+2025-06-29 19:00:17,847 - ERROR - ----------
+Error in instance [52]: Failed to git clone https://github.com/hashgraph/hedera-mirror-node.git: **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--. Stacktrace:
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 254, in process_instance
+    initialize_runtime(runtime, instance)
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 172, in initialize_runtime
+    assert_and_raise(
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 300, in assert_and_raise
+    raise EvalException(msg)
+evaluation.utils.shared.EvalException: Failed to git clone https://github.com/hashgraph/hedera-mirror-node.git: **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--
+
+----------[The above error occurred. Retrying... (attempt 1 of 1)]----------
+
+2025-06-29 19:00:22,867 - INFO - Logging LLM completions for instance 52 to evaluation/evaluation_outputs/outputs/islamham__bugswarm_maven_lite1_v2/CodeActAgent/meta.llama3-1-70b-instruct-v1_0_maxiter_20_N_llm.bedrock1-no-hint-numworker_10-1751245284-run_1/llm_completions/52
+2025-06-29 19:00:22,949 - INFO - Building image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 19:00:22,984 - INFO - [runtime 70a85a5d-7d25-4fa6-b203-34b89886c7f0-e8aa25c6bd81a177] Starting runtime with image: ghcr.io/all-hands-ai/runtime:oh_v0.39.1_rlz0fhk6tp8v8t9b_expzl0jyv1gathl0
+2025-06-29 19:00:23,476 - INFO - [runtime 70a85a5d-7d25-4fa6-b203-34b89886c7f0-e8aa25c6bd81a177] Container started: openhands-runtime-70a85a5d-7d25-4fa6-b203-34b89886c7f0-e8aa25c6bd81a177. VSCode URL: None
+2025-06-29 19:00:23,476 - INFO - [runtime 70a85a5d-7d25-4fa6-b203-34b89886c7f0-e8aa25c6bd81a177] Waiting for client to become ready at http://localhost:34433...
+2025-06-29 19:01:02,102 - INFO - [runtime 70a85a5d-7d25-4fa6-b203-34b89886c7f0-e8aa25c6bd81a177] Runtime is ready.
+2025-06-29 19:01:03,465 - INFO - ------------------------------
+2025-06-29 19:01:03,465 - INFO - BEGIN Runtime Initialization Fn
+2025-06-29 19:01:03,465 - INFO - ------------------------------
+2025-06-29 19:01:03,466 - INFO - **CmdRunAction (source=None, is_input=False)**
+COMMAND:
+git clone https://github.com/hashgraph/hedera-mirror-node.git
+2025-06-29 19:11:03,658 - INFO - **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--
+2025-06-29 19:11:06,487 - ERROR - Failed to git clone https://github.com/hashgraph/hedera-mirror-node.git: **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--
+Traceback (most recent call last):
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 323, in _process_instance_wrapper
+    result = process_instance_func(instance, metadata, use_mp, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 254, in process_instance
+    initialize_runtime(runtime, instance)
+  File "/Users/hamza/OpenHands/evaluation/benchmarks/readme_bench/run_infer.py", line 172, in initialize_runtime
+    assert_and_raise(
+  File "/Users/hamza/OpenHands/evaluation/utils/shared.py", line 300, in assert_and_raise
+    raise EvalException(msg)
+evaluation.utils.shared.EvalException: Failed to git clone https://github.com/hashgraph/hedera-mirror-node.git: **CmdOutputObservation (source=None, exit code=-1, metadata={
+  "exit_code": -1,
+  "pid": -1,
+  "username": null,
+  "hostname": null,
+  "working_dir": null,
+  "py_interpreter_path": null,
+  "prefix": "",
+  "suffix": "\n[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]"
+})**
+--BEGIN AGENT OBSERVATION--
+Cloning into 'hedera-mirror-node'...
+Username for 'https://github.com':
+[The command timed out after 600.0 seconds. You may wait longer to see additional output by sending empty command '', send other commands to interact with the current process, or send keys to interrupt/kill the command.]
+--END AGENT OBSERVATION--
