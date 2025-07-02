@@ -74,14 +74,37 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
             #     logger.warning(f'could not get metrics from output, Instance {instance_id} had error: {e}')
                 
 
-def extract_timed_out_repos(path: str) -> list:
+def extract_timed_out_ids(path: str) -> list:
     with open(path, 'r') as output:
-        repos = []
+        ids = []
         for line in output:
             data = json.loads(line.strip())
             if data.get('error') and 'Timeout' in data['error']:
-                repos.append(data['instance_id'])
-        return repos
+                ids.append(data['instance_id'])
+        return ids
+    
+def extract_max_iter_ids(path: str) -> list:
+    with open(path, 'r') as output:
+        ids = []
+        for line in output:
+            data = json.loads(line.strip())
+            if data.get('error') and 'maximum iteration' in data['error']:
+                ids.append(data['instance_id'])
+        return ids
+
+def extract_task_failed_ids(path: str) -> list:
+    with open(path, 'r') as output:
+        ids = []
+        for line in output:
+            data = json.loads(line.strip())
+            history = data.get('history')
+            if not history:
+                continue
+            last = history[-1]
+            task_completed = last.get('args', {}).get('task_completed')
+            if task_completed == 'false':
+                ids.append(data['instance_id'])
+        return ids
 
 
 # def classify_error(llm: LLM, failed_case: dict) -> str:
@@ -180,8 +203,16 @@ if __name__ == '__main__':
             for instance in analysis:  
                 output.write(json.dumps(instance) + '\n')
          
-        timed_out_repos = extract_timed_out_repos(output_file_path)
-        timed_out_repos_output_name = f'timed_out_repos_{dataset}_{datetime.now()}_{name}.jsonl'
-        with open(timed_out_repos_output_name, 'w') as output: 
-                output.write(json.dumps(timed_out_repos) + '\n')
+        # Extract different types of IDs
+        id_types = {
+            'timed_out': extract_timed_out_ids(output_file_path),
+            'max_iter': extract_max_iter_ids(output_file_path),
+            'task_failed': extract_task_failed_ids(output_file_path)
+        }
+
+        # Save all ID types
+        for id_type, ids in id_types.items():
+            output_name = f'{id_type}_ids_{dataset}_{datetime.now()}_{name}.jsonl'
+            with open(output_name, 'w') as output:
+                output.write(json.dumps(ids) + '\n')
 
