@@ -36,6 +36,7 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                     'read': 0, 'edit': 0, 'think': 0,
                     'message': 0, 'run': 0, 'call_tool_mcp': 0
                 }
+                thought = None
                 build_instructions_exist = True
                 for event in history:
                     if event['source'] == 'agent' and 'action' in event:
@@ -44,8 +45,8 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                             action_counts[action] += 1
                         elif action not in ['finish', 'system']:
                             logger.warning(f'unknown agent action: {action} on Instance {instance_id}')
+                        thought = event['args'].get('thought', '')
                         if build_instructions_exist:
-                            thought = event['args'].get('thought', '')
                             if all(word in thought for word in ['does not contain', 'build', 'instructions']):
                                 build_instructions_exist = False
                 task_completed = last.get('args', {}).get('task_completed')
@@ -65,12 +66,22 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                     },
                     'build_instructions_exist': build_instructions_exist,
                     'task_completed': task_completed,
+                    'thought': thought if not final_thought else None,
                     'final_thought': final_thought,
                     'error': data['error'],
                 })
             # except Exception as e:
             #     logger.warning(f'could not get metrics from output, Instance {instance_id} had error: {e}')
                 
+
+def extract_timed_out_repos(path: str) -> list:
+    with open(path, 'r') as output:
+        repos = []
+        for line in output:
+            data = json.loads(line.strip())
+            if data.get('error') and 'Timeout' in data['error']:
+                repos.append(data['instance_id'])
+        return repos
 
 
 # def classify_error(llm: LLM, failed_case: dict) -> str:
@@ -159,6 +170,8 @@ if __name__ == '__main__':
         
         logger.info(f'Starting analysis for {dataset} runs [{i}/{len(runs)}]:\n{name}')
         extract_metrics_from_output(output_file_path)
+
+
         
         analysis.sort(key=lambda d: int(d['instance_id']))
         output_name = f'analysis_{dataset}_{datetime.now()}_{name}.jsonl'
@@ -166,4 +179,9 @@ if __name__ == '__main__':
         with open(output_name, 'w') as output:
             for instance in analysis:  
                 output.write(json.dumps(instance) + '\n')
+         
+        timed_out_repos = extract_timed_out_repos(output_file_path)
+        timed_out_repos_output_name = f'timed_out_repos_{dataset}_{datetime.now()}_{name}.jsonl'
+        with open(timed_out_repos_output_name, 'w') as output: 
+                output.write(json.dumps(timed_out_repos) + '\n')
 

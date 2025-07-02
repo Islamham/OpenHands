@@ -80,6 +80,8 @@ def get_instruction(instance: pd.Series, metadata: EvalMetadata):
         2. if gradle is used, check output for "BUILD SUCCESSFUL"
         Confirm the project is built successfully using one of the above criteria. 
         If unable to meet criteria exactly as above, do not finish the task.
+        Resources: 
+        - JDK 21, Maven 3.9.10, and Gradle 8.14.2 are installed.
         '''
 
         # If you are unable to build the project, please provide a detailed explanation of the issues you encountered.
@@ -183,6 +185,60 @@ def initialize_runtime(
         obs.exit_code == 0,
         f'Failed to cd to /{workspace_dir_name}: {str(obs)}',
     )
+
+    action = CmdRunAction(
+        command=f'''
+            wget https://download.oracle.com/java/21/latest/jdk-21_linux-aarch64_bin.tar.gz && \
+            tar zxvf jdk-21_linux-aarch64_bin.tar.gz && \
+            export JAVA_HOME=./jdk-21.0.7/ && \
+            echo $JAVA_HOME && \
+            export PATH=$JAVA_HOME/bin:$PATH && \
+            java -version
+        '''
+    )
+    action.set_hard_timeout(600)
+    logger.info(action, extra={'msg_type': 'ACTION'})
+    obs = runtime.run_action(action)
+    logger.info(obs, extra={'msg_type': 'OBSERVATION'})
+    assert_and_raise(
+        obs.exit_code == 0,
+        f'Failed to setup and verify JDK 21: {str(obs)}',
+    )
+
+    action = CmdRunAction(
+        command=f'''
+            wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz && \
+            tar zxvf apache-maven-3.9.10-bin.tar.gz && \
+            export PATH=./apache-maven-3.9.10/bin:$PATH && \
+            mvn -v
+        '''
+    )
+    action.set_hard_timeout(600)
+    logger.info(action, extra={'msg_type': 'ACTION'})
+    obs = runtime.run_action(action)
+    logger.info(obs, extra={'msg_type': 'OBSERVATION'})
+    assert_and_raise(
+        obs.exit_code == 0,
+        f'Failed to setup and verify Maven 3.9.10: {str(obs)}',
+    )
+
+    action = CmdRunAction(
+        command=f'''
+            wget https://services.gradle.org/distributions/gradle-8.14.2-bin.zip && \
+            unzip gradle-8.14.2-bin.zip && \
+            export PATH=./gradle-8.14.2/bin:$PATH && \
+            gradle --version
+        '''
+    )
+    action.set_hard_timeout(600)
+    logger.info(action, extra={'msg_type': 'ACTION'})
+    obs = runtime.run_action(action)
+    logger.info(obs, extra={'msg_type': 'OBSERVATION'})
+    assert_and_raise(
+        obs.exit_code == 0,
+        f'Failed to setup and verify Gradle 8.14.2: {str(obs)}',
+    )
+
 
     logger.info('-' * 30)
     logger.info('END Runtime Initialization Fn')
