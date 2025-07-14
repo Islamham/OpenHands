@@ -8,8 +8,11 @@ from openhands.core.logger import openhands_logger as logger
 from openhands.llm.llm import LLM
 
 config = load_app_config()
-    
-def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
+
+build_tools = ["python3", "python", "pip", "poetry", "mvn", "mvnw", "gradle", "gradlew", "setup.py", "setuptools"]
+build_commands = ["build", "install", "validate", "compile", "test", "package", "integration-test", "verify", "deploy", "assemble", "init", "wrapper", "dependencies", "resolve", "publish", "installDist", "buildPlugin"]
+
+def extract_metrics_from_output(path: str):
 
     with open(path, 'r') as output:
         for line in output:
@@ -38,6 +41,11 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                 }
                 thought = None
                 build_instructions_exist = True
+                subtract_runtime = 0
+                subtract_prompt_tokens = 0
+                subtract_completion_tokens = 0
+                subtract_cost = 0
+                subtract_num_agent_actions = 0
                 for event in history:
                     if event['source'] == 'agent' and 'action' in event:
                         action = event['action']
@@ -49,6 +57,19 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                         if build_instructions_exist:
                             if all(word in thought for word in ['does not contain', 'build', 'instructions']):
                                 build_instructions_exist = False
+                        if not any(tool in event['args']['command'] for tool in build_tools):
+                            if not any(command in event['args']['command'] for command in build_commands):
+                                break
+                            else:
+                                # for the runtime, get the timestamp for this action id, get the timestamp for the observation next, add the total seconds to a subtract_runtime var
+                                # for tokens, get the tokens for the action and add to a subtract tokens var for each type of token
+                                # same for the cost
+                                # increment subtract_num_agent_actions count
+                                subtract_runtime += 1
+                                subtract_prompt_tokens += 1
+                                subtract_completion_tokens += 1
+                                subtract_cost += 1
+                                subtract_num_agent_actions += 1
                 task_completed = last.get('args', {}).get('task_completed')
                 final_thought = last.get('args', {}).get('final_thought')
                 metrics = data['metrics']
@@ -62,7 +83,12 @@ def extract_metrics_from_output(path: str) -> tuple[list[str], list[str]]:
                         'accumulated_completion_token_usage': accumulated_token_usage['completion_tokens'],
                         'runtime_in_seconds': runtime_in_seconds,
                         'total_num_agent_actions':  sum(action_counts.values()),
-                        'num_actions_by_type': action_counts,
+                        'accumulated_cost_no_build': metrics['accumulated_cost'] - subtract_cost,
+                        'accumulated_prompt_token_usage_no_build': accumulated_token_usage['prompt_tokens'] - subtract_prompt_tokens,
+                        'accumulated_completion_token_usage_no_build': accumulated_token_usage['completion_tokens'] - subtract_completion_tokens,
+                        'runtime_in_seconds_no_build': runtime_in_seconds - subtract_runtime,
+                        'total_num_agent_actions_no_build':  sum(action_counts.values()) - subtract_num_agent_actions,
+                        
                     },
                     'build_instructions_exist': build_instructions_exist,
                     'task_completed': task_completed,
@@ -194,8 +220,6 @@ if __name__ == '__main__':
         logger.info(f'Starting analysis for {dataset} runs [{i}/{len(runs)}]:\n{name}')
         extract_metrics_from_output(output_file_path)
 
-
-        
         analysis.sort(key=lambda d: int(d['instance_id']))
         output_name = f'analysis_{dataset}_{datetime.now()}_{name}.jsonl'
         
